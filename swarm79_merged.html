@@ -7,6 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <style>
+/* ─── css ─── */
+
 /* ─── RESET & BASE ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -60,10 +62,12 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-links {
   display: flex; gap: 28px; align-items: center;
+  --text:   #f0efe8;
+
 }
 .nav-links a {
   font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--muted); font-weight: 400;
+  color: red; font-weight: 400;
   transition: color .2s;
 }
 .nav-links a:hover { color: #fff; }
@@ -76,6 +80,13 @@ a { text-decoration: none; color: inherit; }
   transition: opacity .2s;
 }
 .nav-cta:hover { opacity: .85; }
+/* ─── botao  ─── */
+
+/* Opcional: só para dar um espaço entre o botão e o texto */
+button {
+  margin-bottom: 15px;
+}
+
 
 /* ─── HERO ─── */
 .hero {
@@ -128,7 +139,7 @@ a { text-decoration: none; color: inherit; }
 
 .hero-eyebrow {
   font-size: 10px; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--muted);
+  text-transform: uppercase; color:  var(--text)#f0efe8;
   margin-bottom: 6px;
   position: relative; z-index: 2;
 }
@@ -142,7 +153,7 @@ a { text-decoration: none; color: inherit; }
   position: relative; z-index: 2;
 }
 .hero-subtitle {
-  font-size: 15px; color: var(--muted);
+  font-size: 15px; color: var(--text)#f0efe8;
   font-weight: 300; line-height: 1.6;
   max-width: 480px; margin: 0 auto 36px;
   position: relative; z-index: 2;
@@ -153,15 +164,13 @@ a { text-decoration: none; color: inherit; }
   flex-wrap: wrap;
 }
 .btn-outline {
-  background: transparent;
-  border: 1.5px solid var(--red);
-  color: var(--red);
+  background: var(--red); color: #fff; border: none;
   font-family: 'DM Sans', sans-serif;
   font-size: 13px; font-weight: 500;
   padding: 12px 28px; border-radius: 8px; cursor: pointer;
   transition: background .2s, color .2s;
 }
-.btn-outline:hover { background: var(--red); color: #fff; }
+.btn-outline:hover { opacity: .85; background: whitesmoke; color:red; }
 .btn-solid {
   background: var(--red); color: #fff; border: none;
   font-family: 'DM Sans', sans-serif;
@@ -169,11 +178,11 @@ a { text-decoration: none; color: inherit; }
   padding: 12px 28px; border-radius: 8px; cursor: pointer;
   transition: opacity .2s;
 }
-.btn-solid:hover { opacity: .85; }
+.btn-solid:hover { opacity: .85; background: whitesmoke; color:red; }
 
 .hero-scroll {
   position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
-  z-index: 2; text-align: center;
+  z-index: 2; text-align: center;color: var(--text)#f0efe8;
   animation: bounce 2s infinite;
 }
 .hero-scroll span {
@@ -207,7 +216,7 @@ a { text-decoration: none; color: inherit; }
 }
 .h-stat .l {
   font-size: 9px; letter-spacing: 1.5px;
-  text-transform: uppercase; color: var(--dim);
+  text-transform: uppercase; color: white;
   margin-top: 3px;
 }
 
@@ -247,9 +256,9 @@ a { text-decoration: none; color: inherit; }
 /* ─── SECTION SHARED ─── */
 .section { padding: 72px 36px; }
 .section-eyebrow {
-  font-size: 10px; letter-spacing: 3px;
+  letter-spacing: 3px;
   text-transform: uppercase; color: var(--red);
-  margin-bottom: 8px; font-weight: 500;
+  margin-bottom: 30px;
 }
 .section-title {
   font-family: 'Bebas Neue', sans-serif;
@@ -397,14 +406,31 @@ a { text-decoration: none; color: inherit; }
 .news-excerpt {
   font-size: 12px; color: var(--muted); line-height: 1.6;
 }
-.news-link {
-  display: flex; align-items: center; gap: 5px;
-  margin-top: 10px;
-  font-size: 11px; color: var(--red); font-weight: 500;
-  letter-spacing: 0.5px;
-}
-.news-link i { font-size: 14px; }
 
+.news-expand {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, opacity .3s ease;
+  opacity: 0;
+  font-size: 12px; color: var(--muted); line-height: 1.7;
+  margin-top: 0;
+}
+.news-expand--open {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 10px;
+}
+.news-link {
+  background: none; border: none; padding: 0; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-top: 10px; font-size: 11px; color: var(--red);
+  font-weight: 500; font-family: 'DM Sans', sans-serif;
+}
+.news-link:hover { opacity: .75; }
+
+.oculto {
+  display: none;
+}
 /* ─── COMPETIÇÕES ─── */
 .comps {
   background: var(--bg3);
@@ -505,7 +531,7 @@ a { text-decoration: none; color: inherit; }
   .news-img { width: 100%; height: 140px; }
   .footer { flex-direction: column; align-items: flex-start; gap: 10px; }
   .hero-stats { flex-direction: column; }
-  .h-stat { border-right: none; border-bottom: 0.5px solid var(--border); }
+  .h-stat { border-right: none; border-bottom: 0.5px solid var(--border); background: rgba(0, 0, 0, 0.42); }
   .h-stat:last-child { border-bottom: none; }
 }
 
@@ -516,6 +542,10 @@ a { text-decoration: none; color: inherit; }
 </style>
 </head>
 <body>
+
+
+
+
 
 <!-- ══════════════ NAV ══════════════ -->
 <nav class="nav">
@@ -529,7 +559,8 @@ a { text-decoration: none; color: inherit; }
     <a href="#noticias">Notícias</a>
     <a href="#competicoes">Competições</a>
   </div>
-  <button class="nav-cta">Participe</button>
+  <div class="nav-logo-mark">Inovação e Tecnologia</div>
+
 </nav>
 
 <!-- ══════════════ HERO ══════════════ -->
@@ -559,13 +590,13 @@ a { text-decoration: none; color: inherit; }
     </div>
   </div>
 
-  <p class="hero-eyebrow">Universidade Federal de Sergipe · Grupo de Robótica Aérea</p>
+  <p class="hero-eyebrow">Universidade Federal de Sergipe · Grupo de Estudos, Pesquisa e Inovação</p>
   <h1 class="hero-title">Equipe Swarm 79</h1>
-  <p class="hero-subtitle">Precisão de libélula. Inteligência de enxame.<br>Desenvolvemos aeronaves autônomas que pensam em conjunto.</p>
+  <p class="hero-subtitle">Precisão,Comunicação e Inteligência de enxame.<br>Desenvolvemos aeronaves autônomas que pensam em conjunto.</p>
 
   <div class="hero-btns">
-    <button class="btn-outline" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Sobre Nós</button>
-    <button class="btn-solid" onclick="document.getElementById('noticias').scrollIntoView({behavior:'smooth'})">Projetos</button>
+    <button class="btn-outline" onclick="document.getElementById('apoio').scrollIntoView({behavior:'smooth'})">Apoie-nos</button>
+    <button class="btn-solid" onclick="document.getElementById('noticias').scrollIntoView({behavior:'smooth'})">Conheça-nos</button>
   </div>
 
   <!-- Stats strip -->
@@ -597,32 +628,32 @@ a { text-decoration: none; color: inherit; }
 <!-- ══════════════ RIFA BANNER ══════════════ -->
  
  <section class="section comps" id="apoio">
-  <div  class = ""
-  <div class="rifa-left">
-    <i class="ti ti-ticket" style="color:#fff;font-size:26px;"></i>
-    <div>
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
-        <span class="rifa-live">● ao vivo</span>
-        <span class="rifa-text">Rifa solidária Swarm 79</span>
+  <div class = "rifa-banner">
+    <div class="rifa-left">
+        <i class="ti ti-ticket" style="color: red;font-size:26px;"></i>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+            <span class="rifa-live">● ao vivo</span>
+            <span class="rifa-text">Rifa solidária Swarm 79</span>
+          </div>
+          <p class="rifa-sub">Apoie a equipe e concorra a prêmios — pagamento via Pix</p>
+        </div>
       </div>
-      <p class="rifa-sub">Apoie a equipe e concorra a prêmios — pagamento via Pix</p>
+      <div class="rifa-right">
+        <div class="rifa-price-wrap">
+          <div class="rifa-por">por cota</div>
+          <div class="rifa-price">R$30</div>
+        </div>
+        <a href="URL_DO_SEU_LINK" class="btn-rifa">Comprar cota</a>
+      </div>
     </div>
-  </div>
-  <div class="rifa-right">
-    <div class="rifa-price-wrap">
-      <div class="rifa-por">por cota</div>
-      <div class="rifa-price">R$30</div>
-    </div>
-    <button class="btn-rifa">Comprar cota</button>
-  </div>
 </div>
 </section> 
 
 <!-- ══════════════ SOBRE NÓS ══════════════ -->
 <section class="section sobre" id="sobre">
   <div class="sobre-inner">
-    <p class="section-eyebrow">Quem somos</p>
-    <h2 class="section-title">Sobre Nós</h2>
+    <h2 class="section-eyebrow">Sobre Nós</h2>
 
     <div class="sobre-card" style="min-height:360px;">
       <!-- Drone placeholder SVG (reproduz o visual do Figma) -->
@@ -670,7 +701,15 @@ a { text-decoration: none; color: inherit; }
         <p class="sobre-text">
           <em>Swarm 79</em> é uma equipe de drones competitivos dedicada à inovação e alto desempenho. Com precisão, estratégia e tecnologia de ponta, buscamos dominar cada corrida e desafio técnico. A Swarm 79 não apenas voa — <em>nós ditamos o ritmo.</em>
         </p>
-        <button class="sobre-btn">Sobre nós →</button>
+        <button class="sobre-btn" onclick="toggleTexto()">Sobre nós →</button>
+
+        <div id="texto-longo" class="oculto">
+          <p>texto grande e explicativo 
+            bbbbbbbbbbbbbbbbbbbabababbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.
+          </p>
+  <!-- espaço de 86 caracteres por linha , e quantas colunas o html suportar -->
+        </div>
+
       </div>
     </div>
   </div>
@@ -679,8 +718,7 @@ a { text-decoration: none; color: inherit; }
 <!-- ══════════════ SUB ÁREAS ══════════════ -->
 <section class="section subareas" id="subareas">
   <div class="subareas-inner">
-    <p class="section-eyebrow">O que fazemos</p>
-    <h2 class="section-title">Sub Áreas</h2>
+    <h2 class="section-eyebrow">Sub Áreas</h2>
     <div class="areas-grid">
 
       <div class="area-card">
@@ -713,10 +751,10 @@ a { text-decoration: none; color: inherit; }
         <div class="area-desc">Computer vision, SLAM e detecção de objetos para navegação autônoma e operação em enxame com percepção do ambiente em tempo real.</div>
       </div>
 
-      <div class="area-card highlight">
+      <div class="area-card">
         <div class="area-icon"><i class="ti ti-users"></i></div>
         <div class="area-name">Entre no time</div>
-        <div class="area-desc">PSEL 2026 aberto — faça parte do enxame. Buscamos estudantes da UFS apaixonados por robótica, drones e tecnologia autônoma.</div>
+        <div class="area-desc">PSEL 2026 em breve — faça parte do enxame. Buscamos estudantes da UFS apaixonados por robótica, drones e tecnologia autônoma.</div>
       </div>
 
     </div>
@@ -730,9 +768,9 @@ a { text-decoration: none; color: inherit; }
     <h2 class="section-title">Notícias</h2>
     <div class="news-list">
 
+      <!-- Card 1 -->
       <div class="news-card">
         <div class="news-img">
-          <!-- Mini drone SVG thumbnail -->
           <svg width="80" height="60" viewBox="0 0 80 60" fill="none">
             <rect width="80" height="60" fill="#1a1a1a"/>
             <line x1="30" y1="22" x2="15" y2="12" stroke="#444" stroke-width="3" stroke-linecap="round"/>
@@ -750,12 +788,18 @@ a { text-decoration: none; color: inherit; }
         </div>
         <div class="news-body">
           <div class="news-tag">Competição · 2025</div>
-          <div class="news-title">SAE Brasil Eletroquad 2025</div>
+          <h3 class="news-title">SAE Brasil Eletroquad 2025</h3>
           <p class="news-excerpt">A equipe Swarm 79 se prepara para a edição 2025 do SAE Brasil Eletroquad, um dos principais eventos de robótica autônoma do país, representando a Universidade Federal de Sergipe.</p>
-          <div class="news-link">Ver mais <i class="ti ti-arrow-right"></i></div>
+          <div class="news-expand" id="expand-1">
+            <p>Texto completo sobre o SAE Brasil Eletroquad 2025 aqui.</p>
+          </div>
+          <button class="news-link" onclick="toggleNews('expand-1', this)" aria-expanded="false">
+            Ver mais <i class="ti ti-arrow-right"></i>
+          </button>
         </div>
       </div>
 
+      <!-- Card 2 -->
       <div class="news-card">
         <div class="news-img">
           <svg width="80" height="60" viewBox="0 0 80 60" fill="none">
@@ -768,10 +812,15 @@ a { text-decoration: none; color: inherit; }
           </svg>
         </div>
         <div class="news-body">
-          <div class="news-tag">Processo Seletivo · Aberto</div>
-          <div class="news-title">PSEL 2026 — Vagas Abertas</div>
+          <div class="news-tag">Processo Seletivo · Fechado</div>
+          <h3 class="news-title">PSEL 2026 — Vagas Abertas</h3>
           <p class="news-excerpt">O processo seletivo da Swarm 79 para 2026 está aberto para estudantes da UFS. Venha fazer parte de um time que constrói o futuro da robótica aérea em Sergipe.</p>
-          <div class="news-link">Ver mais <i class="ti ti-arrow-right"></i></div>
+          <div class="news-expand" id="expand-2">
+            <p>Texto completo sobre o PSEL 2026 aqui.</p>
+          </div>
+          <button class="news-link" onclick="toggleNews('expand-2', this)" aria-expanded="false">
+            Ver mais <i class="ti ti-arrow-right"></i>
+          </button>
         </div>
       </div>
 
@@ -782,23 +831,28 @@ a { text-decoration: none; color: inherit; }
 <!-- ══════════════ COMPETIÇÕES ══════════════ -->
 <section class="section comps" id="competicoes">
   <div class="comps-inner">
-    <p class="section-eyebrow">Calendário</p>
-    <h2 class="section-title">Competições</h2>
+    <h2 class="section-eyebrow">Calendário</h2>
     <div class="comp-list">
       <div class="comp-row">
-        <div class="comp-dot"></div>
-        <span class="comp-name">SAE Brasil Eletroquad</span>
-        <span class="comp-badge">2025</span>
+        <div class="comp-dot"/>
+        <p class="comp-name">SAE Brasil Eletroquad</p>
+        <div style="width: 100px">
+          <span class="comp-badge">2025</span>
+        </div> 
       </div>
       <div class="comp-row">
-        <div class="comp-dot"></div>
-        <span class="comp-name">PSEL — Processo Seletivo Swarm</span>
-        <span class="comp-badge">Aberto</span>
+        <div class="comp-dot"/>
+        <p class="comp-name">PSEL — Processo Seletivo Swarm</p>
+        <div style="width: 100px">
+          <span class="comp-badge">Fechado</span>
+        </div>
       </div>
       <div class="comp-row">
-        <div class="comp-dot"></div>
-        <span class="comp-name">Carta aberta à reitoria UFS</span>
-        <span class="comp-badge">Em andamento</span>
+        <div class="comp-dot"/>
+        <p class="comp-name">Carta aberta à reitoria UFS</p>
+        <div style="width: 100px">
+          <span class="comp-badge">Em andamento</span>
+        </div>
       </div>
     </div>
   </div>
@@ -820,7 +874,7 @@ a { text-decoration: none; color: inherit; }
       <i class="ti ti-brand-linkedin"></i>
       <span>LinkedIn</span>
     </a>
-    <a class="social-link" href="#" target="_blank">
+    <a class="social-link" href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsCcMfNNsmrvLxXxPHWKTTkQcmbbHVhlRgSXlCHJxBpprXFWnzmZRkdbbfJJQzcLcfnlgjSq" target="_blank">
       <i class="ti ti-mail"></i>
       <span>Contato</span>
     </a>
@@ -839,6 +893,31 @@ a { text-decoration: none; color: inherit; }
   </div>
   <div class="footer-copy">© 2026 Swarm 79 · UFS · Grupo de Robótica Aérea </div>
 </footer>
+
+<!-- ══════════════ javascript ══════════════ -->
+
+<script>
+function toggleTexto() {
+  const texto = document.getElementById("texto-longo");
+
+  if (texto.style.display === "none" || texto.style.display === "") {
+    texto.style.display = "block";
+  } else {
+    texto.style.display = "none";
+  }
+}
+</script>
+
+<script>  
+  function toggleNews(id, btn) {
+  const el = document.getElementById(id);
+  const isOpen = el.classList.toggle('news-expand--open');
+  btn.setAttribute('aria-expanded', isOpen);
+  btn.innerHTML = isOpen
+    ? 'Ver menos <i class="ti ti-arrow-up"></i>'
+    : 'Ver mais <i class="ti ti-arrow-right"></i>';
+}
+</script>
 
 </body>
 </html>
