@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Bebas_Neue, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Bebas_Neue, Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,9 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 const bebasNeue = Bebas_Neue({
-  weight: "400", // A Bebas Neue padrão só tem o peso 400
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-bebas", // Cria uma variável CSS para usarmos depois
+  variable: "--font-bebas", 
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans", 
 });
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.className} ${bebasNeue.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.className} ${bebasNeue.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
