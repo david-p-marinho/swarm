@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipe — Swarm 79</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .eq-hero {
+      padding: 100px 36px 48px;
+      text-align: center;
+      background: var(--bg3);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .eq-body       { max-width: 980px; margin: 0 auto; padding: 56px 36px; }
+    .eq-section    { margin-bottom: 64px; }
+    .eq-section:last-child { margin-bottom: 0; }
+
+    /* Cabeçalho de cada sub-área */
+    .eq-sub-header {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .eq-sub-icon {
+      width: 44px; height: 44px;
+      background: var(--red-dim);
+      border: 0.5px solid var(--red);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--red); font-size: 20px; flex-shrink: 0;
+    }
+    .eq-sub-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px; letter-spacing: 1px; color: var(--text);
+    }
+    .eq-sub-count {
+      margin-left: auto;
+      font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Grid de membros */
+    .eq-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .eq-member {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      transition: border-color .2s, transform .2s;
+    }
+    .eq-member:hover { border-color: var(--red); transform: translateY(-3px); }
+
+    .eq-avatar {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 1.5px solid var(--border);
+      margin: 0 auto 12px;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .eq-avatar img   { width: 100%; height: 100%; object-fit: cover; }
+    .eq-avatar-init  {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px; color: var(--red); letter-spacing: 1px;
+    }
+
+    .eq-name   { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .eq-role   { font-size: 10px; color: var(--muted); letter-spacing: 0.5px; }
+    .eq-links  { display: flex; justify-content: center; gap: 10px; margin-top: 12px; }
+    .eq-links a {
+      font-size: 16px; color: var(--dim);
+      transition: color .2s;
+    }
+    .eq-links a:hover { color: var(--red); }
+
+    @media (max-width: 700px) {
+      .eq-body { padding: 40px 20px; }
+      .eq-members { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">
+    <div class="nav-logo-badge"></div>
+    <div class="nav-logo-mark">SWARM 79</div>
+  </div>
+  <div class="nav-links">
+    <a href="index.html#sobre">Sobre Nós</a>
+    <a href="index.html#subareas">Sub Áreas</a>
+    <a href="index.html#noticias">Notícias</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#calendario">Calendário</a>
+  </div>
+</nav>
+
+<div class="eq-hero">
+  <span class="section-eyebrow">Swarm 79 · UFS</span>
+  <h1 class="hero-title" style="font-size:clamp(32px,6vw,56px);">Nossa Equipe</h1>
+  <p class="hero-subtitle">Conheça os integrantes que fazem o enxame voar.</p>
+</div>
+
+<main class="eq-body" id="eq-body">
+
+  <!-- ── MECÂNICA ── -->
+  <section class="eq-section" id="mecanica">
+    <div class="eq-sub-header">
+      <div class="eq-sub-icon"><i class="ti ti-settings-2" aria-hidden="true"></i></div>
+      <div class="eq-sub-name">Mecânica</div>
+      <span class="eq-sub-count" id="count-mecanica"></span>
+    </div>
+    <div class="eq-members" id="members-mecanica"></div>
+  </section>
+
+  <!-- ── PROGRAMAÇÃO ── -->
+  <section class="eq-section" id="programacao">
+    <div class="eq-sub-header">
+      <div class="eq-sub-icon"><i class="ti ti-code" aria-hidden="true"></i></div>
+      <div class="eq-sub-name">Programação</div>
+      <span class="eq-sub-count" id="count-programacao"></span>
+    </div>
+    <div class="eq-members" id="members-programacao"></div>
+  </section>
+
+  <!-- ── MARKETING ── -->
+  <section class="eq-section" id="marketing">
+    <div class="eq-sub-header">
+      <div class="eq-sub-icon"><i class="ti ti-chart-bar" aria-hidden="true"></i></div>
+      <div class="eq-sub-name">Marketing</div>
+      <span class="eq-sub-count" id="count-marketing"></span>
+    </div>
+    <div class="eq-members" id="members-marketing"></div>
+  </section>
+
+  <!-- ──ELETRICA E ELETRÔNICA ── -->
+  <section class="eq-section" id="eletrica e eletronica">
+    <div class="eq-sub-header">
+      <div class="eq-sub-icon"><i class="ti ti-bolt" aria-hidden="true"></i></div>
+      <div class="eq-sub-name">Elétrica e Eletrônica</div>
+      <span class="eq-sub-count" id="count-eletrica e eletronica"></span>
+    </div>
+    <div class="eq-members" id="members-eletrica e eletronica"></div>
+  </section>
+
+  <!-- ── LIDERANÇA ── -->
+  <section class="eq-section" id="lideranca">
+    <div class="eq-sub-header">
+      <div class="eq-sub-icon"><i class="ti ti-eye" aria-hidden="true"></i></div>
+      <div class="eq-sub-name"> Liderança</div>
+      <span class="eq-sub-count" id="count-lideranca"></span>
+    </div>
+    <div class="eq-members" id="members-lideranca"></div>
+  </section>
+
+  <!-- ── ORIENTAÇÃO ── -->
+  <section class="eq-section" id="orientacao">
+    <div class="eq-sub-header">
+      <div class="eq-sub-icon"><i class="ti ti-eye" aria-hidden="true"></i></div>
+      <div class="eq-sub-name"> Orientação</div>
+      <span class="eq-sub-count" id="count-orientacao"></span>
+    </div>
+    <div class="eq-members" id="members-orientacao"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-logo">SWARM 79</div>
+  <nav class="footer-links" aria-label="Links do rodapé">
+    <a href="index.html">Início</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#calendario">Calendário</a>
+  </nav>
+  <p class="footer-copy">© 2026 Swarm 79 · UFS · Todos os direitos reservados</p>
+</footer>
+
+<script>
+/*
+  ════════════════════════════════════════
+  DADOS DOS INTEGRANTES-> Como preencher o array TEAM
+  ────────────────────────────────────────
+  Para adicionar um membro, copie um objeto
+  e preencha os campos:
+    area    → "mecanica" | "programacao" | "marketing" | "eletronica" | "lideranca" | "orientacao"
+    name    → Nome completo
+    role    → Cargo / função na sub-área
+    photo   → Caminho da foto (ex: "images/equipe/joao.jpg") — deixe "" para usar iniciais
+    github  → URL do GitHub (opcional, deixe "" para ocultar)
+    linkedin→ URL do LinkedIn (opcional, deixe "" para ocultar)
+  as separações são importantes para o script renderizar corretamente os membros em suas respectivas áreas.
+  o que define isso é o campo "area", então preste atenção para usar os valores corretos aqui os comentarios são
+  só indicadores.
+  ════════════════════════════════════════
+*/
+const TEAM = [
+  /* ── MECÂNICA ── */
+  { area:"mecanica",    name:"Nome Sobrenome", role:"Líder de Mecânica",    photo:"red.png", github:"", linkedin:"" },
+  { area:"mecanica",    name:"Nome Sobrenome", role:"Estruturas",           photo:"red.png", github:"", linkedin:"" },
+
+  /* ── PROGRAMAÇÃO ── */
+  { area:"programacao", name:"Nome Sobrenome", role:"Líder de Software",    photo:"red.png", github:"", linkedin:"" },
+  { area:"programacao", name:"Nome Sobrenome", role:"Controle de Voo",      photo:"red.png", github:"", linkedin:"" },
+
+  /* ── MARKETING ── */
+  { area:"marketing",   name:"Nome Sobrenome", role:"Líder de Marketing",   photo:"red.png", github:"", linkedin:"" },
+  { area:"marketing",   name:"Nome Sobrenome", role:"Design",               photo:"red.png", github:"", linkedin:"" },
+
+  /* ── ELETRÔNICA ── */
+  { area:"eletrica e eletronica",  name:"Nome Sobrenome", role:"Líder de Eletrônica",  photo:"red.png", github:"", linkedin:"" },
+  { area:"eletrica e eletronica",  name:"Nome Sobrenome", role:"PCB & Circuitos",      photo:"red.png", github:"", linkedin:"" },
+
+  /* ──  LIDERANÇA ── */
+  { area:"lideranca",   name:"Nome Sobrenome", role:"Líder de Liderança",    photo:"red.png", github:"", linkedin:"" },
+  { area:"lideranca",   name:"Nome Sobrenome", role:"Orientação",             photo:"red.png", github:"", linkedin:"" },
+
+  /* ──  Orientação ── */
+  { area:"orientacao",   name:"Nome Sobrenome", role:"Orientação",             photo:"red.png", github:"", linkedin:"" },
+];
+
+/* ── Iniciais a partir do nome ── */
+function initials(name) {
+  const parts = name.trim().split(' ').filter(Boolean);
+  return parts.length >= 2
+    ? (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
+    : parts[0].slice(0, 2).toUpperCase();
+}
+
+/* ── Renderiza cada sub-área ── */
+function buildTeam() {
+  const areas = ['mecanica','programacao','marketing','eletrica e eletronica','lideranca','orientacao'];
+  areas.forEach(area => {
+    const members = TEAM.filter(m => m.area === area);
+    const grid    = document.getElementById(`members-${area}`);
+    const count   = document.getElementById(`count-${area}`);
+    if (!grid) return;
+
+    count.textContent = `${members.length} integrante${members.length !== 1 ? 's' : ''}`;
+
+    members.forEach(m => {
+      const card = document.createElement('div');
+      card.className = 'eq-member';
+
+      const avatarHtml = m.photo
+        ? `<img src="${m.photo}" alt="Foto de ${m.name}">`
+        : `<span class="eq-avatar-init">${initials(m.name)}</span>`;
+
+      const githubLink   = m.github   ? `<a href="${m.github}"   target="_blank" rel="noopener" title="GitHub"><i class="ti ti-brand-github"></i></a>`   : '';
+      const linkedinLink = m.linkedin ? `<a href="${m.linkedin}" target="_blank" rel="noopener" title="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>` : '';
+      const linksHtml    = (githubLink || linkedinLink) ? `<div class="eq-links">${githubLink}${linkedinLink}</div>` : '';
+
+      card.innerHTML = `
+        <div class="eq-avatar">${avatarHtml}</div>
+        <div class="eq-name">${m.name}</div>
+        <div class="eq-role">${m.role}</div>
+        ${linksHtml}`;
+
+      grid.appendChild(card);
+    });
+  });
+}
+
+/* ── Scroll automático para âncora da URL ── */
+window.addEventListener('load', () => {
+  buildTeam();
+  const hash = location.hash;
+  if (hash) {
+    const el = document.querySelector(hash);
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+  }
+});
+</script>
+</body>
+</html>
