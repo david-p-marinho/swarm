@@ -316,11 +316,14 @@
 @layer theme {
   :root, :host {
     --color-red-500: #fb2c36;
+    --color-white: #fff;
     --spacing: .25rem;
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
     --font-weight-bold: 700;
     --radius-md: .375rem;
+    --radius-lg: .5rem;
+    --radius-xl: .75rem;
     --default-font-family: var(--font-geist-sans);
     --default-mono-font-family: var(--font-geist-mono);
   }
@@ -597,8 +600,16 @@
     right: calc(var(--spacing) * 2);
   }
 
+  .right-4 {
+    right: calc(var(--spacing) * 4);
+  }
+
   .left-2 {
     left: calc(var(--spacing) * 2);
+  }
+
+  .left-4 {
+    left: calc(var(--spacing) * 4);
   }
 
   .m-2 {
@@ -657,6 +668,14 @@
     height: 50px;
   }
 
+  .h-\[65px\] {
+    height: 65px;
+  }
+
+  .h-\[70px\] {
+    height: 70px;
+  }
+
   .h-\[231px\] {
     height: 231px;
   }
@@ -687,6 +706,10 @@
 
   .w-\[30px\] {
     width: 30px;
+  }
+
+  .w-\[75\%\] {
+    width: 75%;
   }
 
   .w-\[95\%\] {
@@ -737,8 +760,16 @@
     border-radius: 3.40282e38px;
   }
 
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+
   .rounded-md {
     border-radius: var(--radius-md);
+  }
+
+  .rounded-xl {
+    border-radius: var(--radius-xl);
   }
 
   .rounded-t-md {
@@ -790,6 +821,14 @@
     background-color: #c8102e1f;
   }
 
+  .bg-\[linear-gradient\(0deg\,_\#1E1D1C96_0\%\,_\#1E1D1C_84\.13\%\)\] {
+    background-image: linear-gradient(0deg, #1e1d1c96 0%, #1e1d1c 84.13%);
+  }
+
+  .bg-\[linear-gradient\(180deg\,_rgba\(30\,_29\,_28\,_0\.59\)_0\%\,_\#1E1D1C_84\.13\%\)\] {
+    background-image: linear-gradient(#1e1d1c96 0%, #1e1d1c 84.13%);
+  }
+
   .object-cover {
     object-fit: cover;
   }
@@ -838,6 +877,14 @@
     padding-block: calc(var(--spacing) * 5);
   }
 
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
+  }
+
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+
   .pt-30 {
     padding-top: calc(var(--spacing) * 30);
   }
@@ -848,6 +895,10 @@
 
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
+  }
+
+  .text-center {
+    text-align: center;
   }
 
   .text-base {
@@ -871,6 +922,10 @@
 
   .text-\[\#D72229\] {
     color: #d72229;
+  }
+
+  .text-white {
+    color: var(--color-white);
   }
 
   .uppercase {
