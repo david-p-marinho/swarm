@@ -9,7 +9,6 @@ const News = () => {
 
             <div className="flex flex-col w-[95%] items-center">
                 <Card icon="settings" title={"Novo site da equipe"} content={"Nosso novo site está no ar"}/>
-                
             </div>
         </section>
     )

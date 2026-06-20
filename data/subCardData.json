@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "settings",
+        "title": "mecanica",
+        "content": "responsável pela modelagem, otimização física da estrutura do drone, cálculo e simulação de propulsão. desenvolvemos melhorias estruturais e de desempenho, aplicando análises, testes e engenharia para tornar cada projeto mais eficiente, estável e confiável."
+    },
+    {
+        "icon": "code-slash",
+        "title": "Programação",
+        "content": "desenvolvemos aplicações e ferramentas que tornam o drone mais inteligente, eficiente para operar de forma autônoma. criamos e aprimoramos o software que sustenta nossos sistemas garantindo integração, eficiência e evolução contínua."
+    },
+    {
+        "icon": "stats-chart",
+        "title": "Marketing",
+        "content": "cuidamos da comunicação e da presença da equipe, criando materiais que fortalecem nossa marca e conectam pessoas ao nosso trabalho. desenvolvemos estratégias e conteúdos que ampliam nossa visibilidade, reforçam nossa identidade e aproximam a comunidade da equipe."
+    },
+    {
+        "icon": "flash",
+        "title": "Eletronica",
+        "content": "projetamos e otimizamos os sistemas elétricos e eletrônicos que sustentam o funcionamento do drone garantindo segurança, eficiência e precisão. desenvolvemos e integramos circuitos, componentes e soluções embarcadas que tornam o drone mais confiável e responsivo."
+    }
+]

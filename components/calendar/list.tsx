@@ -5,17 +5,15 @@ const data = await GetCalendar()
 
 const List = () => {
     return(
-        <ul className="w-full pb-10">
-            <li className="w-full">
+        <div className="w-full pb-10">
                 {
                     data && (
-                        data.map((item) => (
-                            <Items title={item.title} status={item.status}/>
+                        data.map((item, index) => (
+                            <Items key={index} title={item.title} status={item.status}/>
                         ))
                     )
                 }
-            </li>
-        </ul>
+        </div>
     )
 }
 export default List

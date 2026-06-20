@@ -9,9 +9,9 @@ interface cardProps {
     value: string;
 }
 
-export default function EventCard({title, text, value}: cardProps) {
+export default function EventCard({ title, text, value }: cardProps) {
     return (
-        <div className="flex flex-row justify-between items-center px-5 py-2" style={{width: '100%', backgroundColor: '#D72229'}}>
+        <div className="flex flex-row justify-between items-center px-5 py-2 w-full bg-[#D72229]">
             <div className="flex flex-row items-center">
                 <IoTicket className="me-5" />
 
@@ -20,13 +20,13 @@ export default function EventCard({title, text, value}: cardProps) {
                     <p>{text}</p>
                 </div>
             </div>
-            
+
             <div className="flex flex-row items-center">
                 <p className="me-5">{value}</p>
 
-                <button className="px-3 py-2 rounded-md" style={{backgroundColor: 'white', color: 'red'}} onClick={Test}>Comprar</button>
+                <button className="px-3 py-2 rounded-md bg-white text-[#D72229] font-bold" onClick={Test}>Comprar</button>
             </div>
-            
+
         </div>
     )
 }
