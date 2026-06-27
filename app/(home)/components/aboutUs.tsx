@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Title from "./title";
+import Title from "../../../components/title";
 
 export default function AboutUs() {
     return (

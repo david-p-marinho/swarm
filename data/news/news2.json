@@ -1,0 +1,8 @@
+{
+    "title": "Noticia de teste 2",
+    "img": "/news2.jpg",
+    "resume": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "tag": "Teste",
+    "timeStamp": "20/06/2026"
+}

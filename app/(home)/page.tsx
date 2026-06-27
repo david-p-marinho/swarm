@@ -1,13 +1,12 @@
 
 import Header from "@/components/header";
-import EventCard from "@/components/eventCard";
-import Test from "@/utils/test";
-import AboutUs from "@/components/aboutUs";
-import Hero from "@/components/hero/hero";
-import SubArea from "@/components/subArea/page";
-import News from "@/components/news/page";
-import Calendar from "@/components/calendar/page";
-import Follow from "@/components/follow/page";
+import EventCard from "./components/eventCard";
+import AboutUs from "./components/aboutUs";
+import Hero from "./components/hero/hero";
+import SubArea from "./components/subArea/subArea";
+import News from "./components/news/news";
+import Calendar from "./components/calendar/calendar";
+import Follow from "./components/follow/follow";
 
 export default function Home() {
   return (

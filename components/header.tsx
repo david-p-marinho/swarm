@@ -1,21 +1,25 @@
+import Link from "next/link"
+
 export default function Header() {
     return (
             <main className={bodyStyle}>
-                <h1>SWARM 79</h1>
+                <Link href="/">
+                    <h1>SWARM 79</h1>
+                </Link>
 
                 <div>
                     <ul className="flex row">
                         <li className="m-2">
-                            <a className="hover:text-red-500">Sobre nós</a>
+                            <Link href="/" className="hover:text-red-500">Sobre nós</Link>
                         </li>
                         <li className="m-2">
-                            <a className="hover:text-red-500">Sub-áreas</a>
+                            <Link href="/" className="hover:text-red-500">Sub-áreas</Link>
                         </li>
                         <li className="m-2">
-                            <a className="hover:text-red-500">Noticias</a>
+                            <Link href="/noticias" className="hover:text-red-500">Noticias</Link>
                         </li>
                         <li className="m-2 ">
-                            <a className="hover:text-red-500">Competições</a>
+                            <Link href="/" className="hover:text-red-500">Competições</Link>
                         </li>
                     </ul>
                 </div>

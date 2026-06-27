@@ -1,4 +1,4 @@
-import Title from "../title"
+import Title from "../../../../components/title"
 import Card from "./card"
 import List from "./list"
 
