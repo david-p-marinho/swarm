@@ -9,81 +9,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    .eq-hero {
-      padding: 100px 36px 48px;
-      text-align: center;
-      background: var(--bg3);
-      border-bottom: 0.5px solid var(--border);
-    }
-    .eq-body       { max-width: 980px; margin: 0 auto; padding: 56px 36px; }
-    .eq-section    { margin-bottom: 64px; }
+    .eq-hero { padding: 100px 36px 48px; text-align: center; background: var(--bg3); border-bottom: 0.5px solid var(--border); }
+    .eq-body { max-width: 980px; margin: 0 auto; padding: 56px 36px; }
+    .eq-section { margin-bottom: 64px; }
     .eq-section:last-child { margin-bottom: 0; }
-
-    /* Cabeçalho de cada sub-área */
-    .eq-sub-header {
-      display: flex; align-items: center; gap: 14px;
-      margin-bottom: 28px;
-      padding-bottom: 16px;
-      border-bottom: 0.5px solid var(--border);
-    }
-    .eq-sub-icon {
-      width: 44px; height: 44px;
-      background: var(--red-dim);
-      border: 0.5px solid var(--red);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--red); font-size: 20px; flex-shrink: 0;
-    }
-    .eq-sub-name {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 28px; letter-spacing: 1px; color: var(--text);
-    }
-    .eq-sub-count {
-      margin-left: auto;
-      font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* Grid de membros */
-    .eq-members {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 16px;
-    }
-    .eq-member {
-      background: var(--bg2);
-      border: 0.5px solid var(--border);
-      border-radius: 12px;
-      padding: 20px 16px;
-      text-align: center;
-      transition: border-color .2s, transform .2s;
-    }
+    .eq-sub-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 0.5px solid var(--border); }
+    .eq-sub-icon { width: 44px; height: 44px; background: var(--red-dim); border: 0.5px solid var(--red); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--red); font-size: 20px; flex-shrink: 0; }
+    .eq-sub-name { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; color: var(--text); }
+    .eq-sub-count { margin-left: auto; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+    .eq-members { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+    .eq-member { background: var(--bg2); border: 0.5px solid var(--border); border-radius: 12px; padding: 20px 16px; text-align: center; transition: border-color .2s, transform .2s; }
     .eq-member:hover { border-color: var(--red); transform: translateY(-3px); }
-
-    .eq-avatar {
-      width: 64px; height: 64px;
-      border-radius: 50%;
-      background: var(--bg3);
-      border: 1.5px solid var(--border);
-      margin: 0 auto 12px;
-      overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .eq-avatar img   { width: 100%; height: 100%; object-fit: cover; }
-    .eq-avatar-init  {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 22px; color: var(--red); letter-spacing: 1px;
-    }
-
-    .eq-name   { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
-    .eq-role   { font-size: 10px; color: var(--muted); letter-spacing: 0.5px; }
-    .eq-links  { display: flex; justify-content: center; gap: 10px; margin-top: 12px; }
-    .eq-links a {
-      font-size: 16px; color: var(--dim);
-      transition: color .2s;
-    }
+    .eq-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--bg3); border: 1.5px solid var(--border); margin: 0 auto 12px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .eq-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .eq-avatar-init { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--red); letter-spacing: 1px; }
+    .eq-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .eq-role { font-size: 10px; color: var(--muted); letter-spacing: 0.5px; }
+    .eq-links { display: flex; justify-content: center; gap: 10px; margin-top: 12px; }
+    .eq-links a { font-size: 16px; color: var(--dim); transition: color .2s; }
     .eq-links a:hover { color: var(--red); }
-
     @media (max-width: 700px) {
       .eq-body { padding: 40px 20px; }
       .eq-members { grid-template-columns: repeat(2, 1fr); }
@@ -112,6 +56,28 @@
   <p class="hero-subtitle">Conheça os integrantes que fazem o enxame voar.</p>
 </div>
 
+<!--
+  ════════════════════════════════════════
+  SEÇÕES DE SUB-ÁREA — Estrutura HTML
+  ════════════════════════════════════════
+  Cada <section class="eq-section"> abaixo é uma sub-área.
+  O id da section deve coincidir com o onclick dos cards
+  em index.html. Ex: id="mecanica" ↔ onclick="equipe.html#mecanica"
+
+  Os MEMBROS não são adicionados aqui no HTML.
+  Eles são gerenciados pelo array TEAM no <script> no final.
+  Este HTML serve apenas como contêiner visual.
+
+  Para adicionar uma NOVA sub-área:
+    1. Copie um bloco <section class="eq-section"> abaixo
+    2. Troque o id, o ícone (ti ti-NOME), o nome e os ids
+       dos spans count e members
+    3. Adicione o mesmo id no array 'areas' dentro de buildTeam()
+    4. Adicione um card correspondente em index.html > subareas
+
+  Ícones disponíveis em: tabler.io/icons
+  ════════════════════════════════════════
+-->
 <main class="eq-body" id="eq-body">
 
   <!-- ── MECÂNICA ── -->
@@ -144,7 +110,7 @@
     <div class="eq-members" id="members-marketing"></div>
   </section>
 
-  <!-- ──ELETRICA E ELETRÔNICA ── -->
+  <!-- ── ELÉTRICA E ELETRÔNICA ── -->
   <section class="eq-section" id="eletrica e eletronica">
     <div class="eq-sub-header">
       <div class="eq-sub-icon"><i class="ti ti-bolt" aria-hidden="true"></i></div>
@@ -157,8 +123,8 @@
   <!-- ── LIDERANÇA ── -->
   <section class="eq-section" id="lideranca">
     <div class="eq-sub-header">
-      <div class="eq-sub-icon"><i class="ti ti-eye" aria-hidden="true"></i></div>
-      <div class="eq-sub-name"> Liderança</div>
+      <div class="eq-sub-icon"><i class="ti ti-crown" aria-hidden="true"></i></div>
+      <div class="eq-sub-name">Liderança</div>
       <span class="eq-sub-count" id="count-lideranca"></span>
     </div>
     <div class="eq-members" id="members-lideranca"></div>
@@ -167,12 +133,13 @@
   <!-- ── ORIENTAÇÃO ── -->
   <section class="eq-section" id="orientacao">
     <div class="eq-sub-header">
-      <div class="eq-sub-icon"><i class="ti ti-eye" aria-hidden="true"></i></div>
-      <div class="eq-sub-name"> Orientação</div>
+      <div class="eq-sub-icon"><i class="ti ti-school" aria-hidden="true"></i></div>
+      <div class="eq-sub-name">Orientação</div>
       <span class="eq-sub-count" id="count-orientacao"></span>
     </div>
     <div class="eq-members" id="members-orientacao"></div>
   </section>
+  <!-- Adicione novas seções de sub-área aqui seguindo o modelo acima -->
 
 </main>
 
@@ -189,47 +156,83 @@
 <script>
 /*
   ════════════════════════════════════════
-  DADOS DOS INTEGRANTES-> Como preencher o array TEAM
-  ────────────────────────────────────────
-  Para adicionar um membro, copie um objeto
+  INTEGRANTES DA EQUIPE — Como preencher
+  ════════════════════════════════════════
+  Cada objeto dentro do array TEAM é um membro da equipe.
+  Para adicionar um membro, copie qualquer objeto existente,
+  cole no grupo correto (os comentários indicam cada grupo)
   e preencha os campos:
-    area    → "mecanica" | "programacao" | "marketing" | "eletronica" | "lideranca" | "orientacao"
-    name    → Nome completo
-    role    → Cargo / função na sub-área
-    photo   → Caminho da foto (ex: "images/equipe/joao.jpg") — deixe "" para usar iniciais
-    github  → URL do GitHub (opcional, deixe "" para ocultar)
-    linkedin→ URL do LinkedIn (opcional, deixe "" para ocultar)
-  as separações são importantes para o script renderizar corretamente os membros em suas respectivas áreas.
-  o que define isso é o campo "area", então preste atenção para usar os valores corretos aqui os comentarios são
-  só indicadores.
+
+    area     → Sub-área do membro. Use EXATAMENTE um destes valores
+               (atenção às letras minúsculas e espaços):
+                 "mecanica"
+                 "programacao"
+                 "marketing"
+                 "eletrica e eletronica"
+                 "lideranca"
+                 "orientacao"
+               Este campo determina em qual seção o membro aparece.
+
+    name     → Nome completo do integrante
+               Ex: "João Silva"
+
+    role     → Cargo ou função dentro da sub-área
+               Ex: "Líder de Mecânica", "Design", "Controle de Voo"
+
+    photo    → Caminho para a foto do membro
+               Ex: "images/equipe/joao.jpg"
+               Deixe "" (duas aspas vazias) para exibir
+               as iniciais do nome automaticamente no lugar da foto.
+               Tamanho ideal da foto: 200x200px (quadrado).
+
+    github   → URL completa do perfil GitHub do membro
+               Ex: "https://github.com/usuario"
+               Deixe "" para não mostrar o ícone do GitHub.
+
+    linkedin → URL completa do perfil LinkedIn do membro
+               Ex: "https://linkedin.com/in/usuario"
+               Deixe "" para não mostrar o ícone do LinkedIn.
+
+  ONDE COLOCAR AS FOTOS:
+  Crie a pasta images/equipe/ e coloque os arquivos lá dentro.
+  Ex: images/equipe/joao.jpg → photo: "images/equipe/joao.jpg"
   ════════════════════════════════════════
 */
 const TEAM = [
-  /* ── MECÂNICA ── */
-  { area:"mecanica",    name:"Nome Sobrenome", role:"Líder de Mecânica",    photo:"red.png", github:"", linkedin:"" },
-  { area:"mecanica",    name:"Nome Sobrenome", role:"Estruturas",           photo:"red.png", github:"", linkedin:"" },
 
-  /* ── PROGRAMAÇÃO ── */
-  { area:"programacao", name:"Nome Sobrenome", role:"Líder de Software",    photo:"red.png", github:"", linkedin:"" },
-  { area:"programacao", name:"Nome Sobrenome", role:"Controle de Voo",      photo:"red.png", github:"", linkedin:"" },
+  /* ── MECÂNICA ─────────────────────────────────────────── */
+  { area:"mecanica",              name:"Nome Sobrenome", role:"Líder de Mecânica",              photo:"red.png", github:"", linkedin:"" },
+  { area:"mecanica",              name:"Nome Sobrenome", role:"Estruturas",                     photo:"red.png", github:"", linkedin:"" },
+  /* Adicione membros de Mecânica aqui */
 
-  /* ── MARKETING ── */
-  { area:"marketing",   name:"Nome Sobrenome", role:"Líder de Marketing",   photo:"red.png", github:"", linkedin:"" },
-  { area:"marketing",   name:"Nome Sobrenome", role:"Design",               photo:"red.png", github:"", linkedin:"" },
+  /* ── PROGRAMAÇÃO ──────────────────────────────────────── */
+  { area:"programacao",           name:"Nome Sobrenome", role:"Líder de Software",              photo:"red.png", github:"", linkedin:"" },
+  { area:"programacao",           name:"Nome Sobrenome", role:"Controle de Voo",                photo:"red.png", github:"", linkedin:"" },
+  { area:"programacao",           name:"DAVID",          role:"Design e Criação de interfaces", photo:"red.png", github:"", linkedin:"" },
+  /* Adicione membros de Programação aqui */
 
-  /* ── ELETRÔNICA ── */
-  { area:"eletrica e eletronica",  name:"Nome Sobrenome", role:"Líder de Eletrônica",  photo:"red.png", github:"", linkedin:"" },
-  { area:"eletrica e eletronica",  name:"Nome Sobrenome", role:"PCB & Circuitos",      photo:"red.png", github:"", linkedin:"" },
+  /* ── MARKETING ────────────────────────────────────────── */
+  { area:"marketing",             name:"Nome Sobrenome", role:"Líder de Marketing",             photo:"red.png", github:"", linkedin:"" },
+  { area:"marketing",             name:"Nome Sobrenome", role:"Design",                         photo:"red.png", github:"", linkedin:"" },
+  /* Adicione membros de Marketing aqui */
 
-  /* ──  LIDERANÇA ── */
-  { area:"lideranca",   name:"Nome Sobrenome", role:"Líder de Liderança",    photo:"red.png", github:"", linkedin:"" },
-  { area:"lideranca",   name:"Nome Sobrenome", role:"Orientação",             photo:"red.png", github:"", linkedin:"" },
+  /* ── ELÉTRICA E ELETRÔNICA ────────────────────────────── */
+  { area:"eletrica e eletronica", name:"Nome Sobrenome", role:"Líder de Eletrônica",            photo:"red.png", github:"", linkedin:"" },
+  { area:"eletrica e eletronica", name:"Nome Sobrenome", role:"PCB & Circuitos",                photo:"red.png", github:"", linkedin:"" },
+  /* Adicione membros de Elétrica aqui */
 
-  /* ──  Orientação ── */
-  { area:"orientacao",   name:"Nome Sobrenome", role:"Orientação",             photo:"red.png", github:"", linkedin:"" },
+  /* ── LIDERANÇA ────────────────────────────────────────── */
+  { area:"lideranca",             name:"Nome Sobrenome", role:"Capitão",                        photo:"red.png", github:"", linkedin:"" },
+  { area:"lideranca",             name:"Nome Sobrenome", role:"Vice-capitão",                   photo:"red.png", github:"", linkedin:"" },
+  /* Adicione membros de Liderança aqui */
+
+  /* ── ORIENTAÇÃO ───────────────────────────────────────── */
+  { area:"orientacao",            name:"Nome Sobrenome", role:"Professor Orientador",            photo:"red.png", github:"", linkedin:"" }
+  /* Adicione membros de Orientação aqui */
+
 ];
 
-/* ── Iniciais a partir do nome ── */
+/* ── Gera as iniciais a partir do nome (usado quando photo é "") ── */
 function initials(name) {
   const parts = name.trim().split(' ').filter(Boolean);
   return parts.length >= 2
@@ -237,9 +240,29 @@ function initials(name) {
     : parts[0].slice(0, 2).toUpperCase();
 }
 
-/* ── Renderiza cada sub-área ── */
+/*
+  ════════════════════════════════════════
+  LISTA DE SUB-ÁREAS ATIVAS
+  ════════════════════════════════════════
+  Se você criar uma nova sub-área, adicione o id dela
+  neste array para que os membros sejam renderizados.
+  O id aqui deve ser idêntico ao:
+    - campo "area" nos objetos do array TEAM
+    - id da <section> no HTML acima
+    - âncora usada no onclick em index.html
+  ════════════════════════════════════════
+*/
 function buildTeam() {
-  const areas = ['mecanica','programacao','marketing','eletrica e eletronica','lideranca','orientacao'];
+  const areas = [
+    'mecanica',
+    'programacao',
+    'marketing',
+    'eletrica e eletronica',
+    'lideranca',
+    'orientacao'
+    /* Adicione novas sub-áreas aqui */
+  ];
+
   areas.forEach(area => {
     const members = TEAM.filter(m => m.area === area);
     const grid    = document.getElementById(`members-${area}`);
@@ -271,7 +294,7 @@ function buildTeam() {
   });
 }
 
-/* ── Scroll automático para âncora da URL ── */
+/* ── Scroll automático para a âncora da URL ── */
 window.addEventListener('load', () => {
   buildTeam();
   const hash = location.hash;

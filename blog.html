@@ -9,20 +9,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    .blog-hero   { padding: 100px 36px 40px; text-align: center; background: var(--bg3); border-bottom: 0.5px solid var(--border); }
-    .blog-grid   { max-width: 860px; margin: 0 auto; padding: 48px 36px; display: flex; flex-direction: column; gap: 40px; }
-    .blog-post   { border-bottom: 0.5px solid var(--border); padding-bottom: 40px; }
-    .blog-img    { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; background: var(--bg2); display:flex; align-items:center; justify-content:center; }
-    .blog-img i  { font-size: 48px; color: var(--dim); }
-    .blog-date   { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-    .blog-title  { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; color: var(--text); margin-bottom: 12px; }
-    .blog-body   { font-size: 14px; color: var(--muted); line-height: 1.8; }
-    .blog-tag    { display: inline-block; background: var(--red-dim); color: var(--red); font-size: 10px; padding: 3px 10px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 0.5px; }
-    .back-link   { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--red); margin-bottom: 32px; }
-    .back-link:hover { opacity: .75; }
+    .blog-hero  { padding: 100px 36px 40px; text-align: center; background: var(--bg3); border-bottom: 0.5px solid var(--border); }
+    .blog-grid  { max-width: 860px; margin: 0 auto; padding: 48px 36px; display: flex; flex-direction: column; gap: 40px; }
+    .blog-post  { border-bottom: 0.5px solid var(--border); padding-bottom: 40px; }
+    .blog-img   { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; background: var(--bg2); display:flex; align-items:center; justify-content:center; }
+    .blog-img i { font-size: 48px; color: var(--dim); }
+    .blog-date  { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .blog-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; color: var(--text); margin-bottom: 12px; }
+    .blog-body  { font-size: 14px; color: var(--muted); line-height: 1.8; }
+    .blog-tag   { display: inline-block; background: var(--red-dim); color: var(--red); font-size: 10px; padding: 3px 10px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 0.5px; }
   </style>
 </head>
 <body>
+
   <nav class="nav">
     <div class="nav-logo">
       <div class="nav-logo-badge"></div>
@@ -32,8 +31,7 @@
       <a href="index.html#sobre">Sobre Nós</a>
       <a href="index.html#subareas">Sub Áreas</a>
       <a href="index.html#noticias">Notícias</a>
-      <a href="index.html#competicoes">Competições</a>
-      
+      <a href="index.html#calendario">Calendário</a>
     </div>
   </nav>
 
@@ -46,12 +44,44 @@
   <main class="blog-grid" id="blog-grid"></main>
 
   <script>
+  /*
+    ════════════════════════════════════════
+    BLOG — Como adicionar um post completo
+    ════════════════════════════════════════
+    Cada objeto do array POSTS é um artigo completo nesta página.
+    O botão "Ver mais" na home leva até aqui usando o id do post.
+
+    REGRA IMPORTANTE:
+    O campo "id" aqui deve ser o MESMO id do item correspondente
+    no array NEWS dentro de script.js.
+    Ex: se na home o item tem id:3, aqui também deve ser id:3.
+    É esse id que faz o link "Ver mais" funcionar.
+
+    Campos:
+      id    → Número único. Não repita. Deve coincidir com script.js > NEWS
+      tag   → Categoria do post (ex: "Competição · 2025", "Evento")
+      date  → Data legível exibida abaixo do título (ex: "Junho 2025")
+      title → Título completo do post
+      body  → Texto completo do post. Pode ser longo.
+               Dica: para separar em parágrafos, escreva cada um
+               dentro de uma tag <p> usando template literal.
+
+    Para adicionar um post:
+      1. Copie qualquer objeto do array abaixo
+      2. Cole antes do comentário "Adicione novos posts aqui"
+      3. Troque os campos com o conteúdo real
+      4. Adicione o resumo correspondente em script.js > NEWS
+         com o mesmo id
+    ════════════════════════════════════════
+  */
   const POSTS = [
-    { id:1, tag:"Competição · 2025", date:"Junho 2025",   title:"SAE Brasil Eletroquad 2025",     body:"Texto completo sobre o SAE Brasil Eletroquad 2025. Substitua este texto pelo conteúdo real do post. Você pode adicionar quantos parágrafos quiser." },
-    { id:2, tag:"Processo Seletivo", date:"Janeiro 2026", title:"PSEL 2026 — Vagas Abertas",      body:"Texto completo sobre o PSEL 2026. Detalhe as etapas, datas e áreas disponíveis para candidatos." },
-    { id:3, tag:"Tecnologia",        date:"Maio 2025",    title:"Novo sistema de visão embarcado", body:"Detalhes sobre a integração do módulo de visão computacional no drone de competição." },
-    { id:4, tag:"Evento",            date:"Julho 2025",   title:"Workshop de drones — Jul 2025",  body:"Informações completas sobre inscrições, programação e o que os participantes vão aprender." },
-    { id:5, tag:"Equipe",            date:"Março 2025",   title:"Novos membros no time 2025",     body:"Conheça os 8 novos membros que ingressaram na Swarm 79 após o processo seletivo 2025." },
+    { id:1, tag:"Competição · 2025", date:"Junho 2025",   title:"SAE Brasil Eletroquad 2025",      body:"Texto completo sobre o SAE Brasil Eletroquad 2025. Substitua este texto pelo conteúdo real do post. Você pode adicionar quantos parágrafos quiser." },
+    { id:2, tag:"Processo Seletivo", date:"Janeiro 2026", title:"PSEL 2026 — Vagas Abertas",       body:"Texto completo sobre o PSEL 2026. Detalhe as etapas, datas e áreas disponíveis para candidatos." },
+    { id:3, tag:"Tecnologia",        date:"Maio 2025",    title:"Novo sistema de visão embarcado",  body:"Detalhes sobre a integração do módulo de visão computacional no drone de competição." },
+    { id:4, tag:"Evento",            date:"Julho 2025",   title:"Workshop de drones — Jul 2025",   body:"Informações completas sobre inscrições, programação e o que os participantes vão aprender." },
+    { id:5, tag:"Equipe",            date:"Março 2025",   title:"Novos membros no time 2025",      body:"Conheça os 8 novos membros que ingressaram na Swarm 79 após o processo seletivo 2025." },
+    { id:6, tag:"TESTE",             date:"Março 2025",   title:"teste",                           body:"Conheça os 8 novos membros que ingressaram na Swarm 79 após o processo seletivo 2025." }
+    /* Adicione novos posts aqui. Lembre de também adicionar em script.js > NEWS */
   ];
 
   const grid = document.getElementById('blog-grid');
@@ -68,7 +98,7 @@
     grid.appendChild(el);
   });
 
-  // Scroll automático para a âncora após carregar
+  /* Scroll automático para a âncora após carregar */
   window.addEventListener('load', () => {
     const hash = location.hash;
     if (hash) {
