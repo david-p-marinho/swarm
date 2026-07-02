@@ -1,10 +1,11 @@
 # 🚁 Swarm 79 — Site Oficial
   Este é um projeto conjunto do Grupo de Estudos, Pesquisa e Inovação em Robótica Aérea · Universidade Federal de Sergipe nomeado equipe SWARM79 como enfatizado no aspecto
-geral tudo que for tratado sobre este projeto en si deve ser feito em conjunto como forma de fometentar atividades de engajamento a equipe fora isto este readme contem uma pequena
-previa do que é passado mais detalhadamente no manual da swarm , dito isso é inprecindivel que qualquel integrante da equipe com acesso ao projeto leia o manual e as instruções 
-recomenteadas antes e realizar qualquer alteração no projeto sem a plena ciencia do que realmente está fazendo
+  geral tudo que for tratado sobre este projeto en si deve ser feito em conjunto como forma de fometentar atividades de engajamento a equipe fora isto este readme contem uma pequena
+  previa do que é passado mais detalhadamente no manual da swarm , dito isso é inprecindivel que qualquel integrante da equipe com acesso ao projeto leia o manual e as instruções 
+  recomenteadas antes e realizar qualquer alteração no projeto sem a plena ciencia do que realmente está fazendo
+
   Logo abaixo está uma colinha com informações rapidas para uso e manutenção no projeto lembrando que estas informações rapidas não substituem a informação integra do manual, mas quebram um galho
-  para quem a=não tem muito tempo ou ja leu o manual, use com sabedoria. 
+  para quem a=não tem muito tempo ou ja leu o manual, use com sabedoria.
 
 ![Swarm 79](https://img.shields.io/badge/Swarm%2079-UFS-C8102E?style=for-the-badge)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
