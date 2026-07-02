@@ -5,7 +5,7 @@
   recomenteadas antes e realizar qualquer alteração no projeto sem a plena ciencia do que realmente está fazendo
 
   Logo abaixo está uma colinha com informações rapidas para uso e manutenção no projeto lembrando que estas informações rapidas não substituem a informação integra do manual, mas quebram um galho
-  para quem a não tem muito tempo ou ja leu o manual, use com sabedoria.
+  para quem a não tem muito tempo ou ja leu o manual o codigo tambem tem comentarios para facilitar no versionamento, use com sabedoria.
 
 ![Swarm 79](https://img.shields.io/badge/Swarm%2079-UFS-C8102E?style=for-the-badge)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
