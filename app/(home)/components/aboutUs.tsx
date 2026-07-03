@@ -8,9 +8,9 @@ export default function AboutUs() {
             <Title content="Quem somos"/>
 
             <div className={cardStyle}>
-                <Image className="w-full h-[360px] object-cover rounded-t-md shadow-md" src={'/aboutUs.jpeg'} alt="Foto da equipe" height={360} width={900} objectFit="cover" />
+                <Image className="w-full h-[360px] object-cover rounded-t-md" src={'/aboutUs.jpeg'} alt="Foto da equipe" height={360} width={900} objectFit="cover" />
 
-                <div className="flex px-3 pb-3 justify-between w-full items-center">
+                <div className="flex px-3 my-4  justify-between w-full items-center">
                     <p className="text-base w-[700px]">
                         Swarm 79 é uma equipe de drones competitivos dedicada à inovação e alto desempenho. Com precisão, estratégia e tecnologia de ponta, buscamos dominar cada corrida e desafio técnico.
                     </p>
@@ -21,4 +21,4 @@ export default function AboutUs() {
     )
 }
 
-const cardStyle = "w-[900] h-[435] flex flex-col justify-between items-center rounded-md px-[1] border-[0.5px] border-[#FFFFFF12]"
+const cardStyle = "w-[900] h-[435] flex flex-col items-center rounded-md px-[1] border-[1px] border-[#FFFFFF12] shadow-md"

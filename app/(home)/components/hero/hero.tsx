@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroList from "./heroList";
+import Link from "next/link";
 
 const Hero = () => {
     return (
@@ -9,6 +10,10 @@ const Hero = () => {
             <p className="text-[10px] tracking-[3px] uppercase">
                 Universidade Federal de Sergipe · Grupo de Estudos, Pesquisa e Inovação
             </p>
+            <div className="flex justify-center my-15">
+                <Link className="px-3 py-2 text-white bg-[#D72229] mx-2 rounded-md " href={"/"}>Apoie-nos</Link>
+                <Link className="px-3 py-2 text-white bg-[#D72229] mx-2 rounded-md" href={"/"}>Conheça-nos</Link>
+            </div>
             <HeroList />
         </div>
     )

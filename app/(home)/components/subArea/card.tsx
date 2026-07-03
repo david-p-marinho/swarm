@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 interface CardProps {
     title: string,
     content: string,
@@ -6,12 +8,18 @@ interface CardProps {
 
 const Card = ({title, content, icon}: CardProps) => {
     return(
-        <div className="border-1 border-[#ffffff12] rounded-md px-10 py-5 mx-3 flex flex-col items-center justify-between w-[280px] h-[385px]">
+        <Link href="#" className="border-1 border-[#1A1918] bg-[#242321] shadow-md rounded-md px-10 py-5 mx-3 flex flex-col items-center justify-between w-[280px] h-[385px] group hover:border-[#8A161A] transition-all duration-300 hover:shadow-xl">
             {/* @ts-ignore */}
-            <ion-icon name={icon} className="w-[30px] h-[30px] text-[#D72229]"></ion-icon>
+            <ion-icon name={icon} className="w-[30px] h-[30px] text-[#D72229] "></ion-icon>
             <p className="text-[#D72229]" style={{fontSize: 16, fontWeight: 'bold'}}>{title}</p>
             <p className="h-[231px]" style={{fontSize: 14}}>{content}</p>
-        </div>
+
+            <div className="self-end invisible group-hover:visible flex items-center transition-all duration-100">
+                <p className="mr-1 text-[#D72229]">Ver integrantes</p>
+                {/* @ts-ignore */}
+                <ion-icon className="text-[#D72229]" name="arrow-forward"></ion-icon>
+            </div>
+        </Link>
     )
 }
 
