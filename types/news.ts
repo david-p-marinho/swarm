@@ -5,4 +5,5 @@ export interface News {
     content: string;
     tag: string;
     timeStamp: string;
+    isHighLight: boolean
 }
