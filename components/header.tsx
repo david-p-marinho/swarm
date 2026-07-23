@@ -10,7 +10,7 @@ export default function Header() {
                 <div>
                     <ul className="flex row">
                         <li className="m-2">
-                            <Link href="/" className="hover:text-red-500">Sobre nós</Link>
+                            <Link href="/sobre" className="hover:text-red-500">Sobre nós</Link>
                         </li>
                         <li className="m-2">
                             <Link href="/" className="hover:text-red-500">Sub-áreas</Link>
