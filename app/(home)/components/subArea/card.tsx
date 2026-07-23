@@ -1,18 +1,13 @@
+import SubArea from "@/type/subArea"
 import Link from "next/link"
 
-interface CardProps {
-    title: string,
-    content: string,
-    icon: string
-}
-
-const Card = ({title, content, icon}: CardProps) => {
+const Card = ({title, desc, icon}: SubArea) => {
     return(
         <Link href="#" className="border-1 border-[#1A1918] bg-[#242321] shadow-md rounded-md px-10 py-5 mx-3 flex flex-col items-center justify-between w-[280px] h-[385px] group hover:border-[#8A161A] transition-all duration-300 hover:shadow-xl">
             {/* @ts-ignore */}
             <ion-icon name={icon} className="w-[30px] h-[30px] text-[#D72229] "></ion-icon>
             <p className="text-[#D72229]" style={{fontSize: 16, fontWeight: 'bold'}}>{title}</p>
-            <p className="h-[231px]" style={{fontSize: 14}}>{content}</p>
+            <p className="h-[231px]" style={{fontSize: 14}}>{desc}</p>
 
             <div className="self-end invisible group-hover:visible flex items-center transition-all duration-100">
                 <p className="mr-1 text-[#D72229]">Ver integrantes</p>
