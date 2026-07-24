@@ -1,5 +1,11 @@
 import Header from "@/components/header";
 import Image from "next/image";
+import TeamMembers from "./components/teamMembers";
+import { GetSubs } from "@/utils/getSub";
+import { GetMembers } from "@/utils/getMembers";
+
+const areas = await GetSubs()
+const [eletronica, marketing, mecanica, ti] = await GetMembers()
 
 export default function About() {
     return (
@@ -18,8 +24,8 @@ export default function About() {
 
                 <div>
                     <h2 className="text-[#D72229] text-[34px] font-bold py-10 mb-10">Integrantes</h2>
-
-                    
+                
+                    <TeamMembers areas={areas} eletronica={eletronica} marketing={marketing} mecanica={mecanica} ti={ti} />
                 </div>
             </main>
 

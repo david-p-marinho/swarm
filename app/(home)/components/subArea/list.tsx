@@ -9,7 +9,7 @@ const List = () => {
             {
                 data && (
                     data.map((item, index) => (
-                        <Card key={index} title={item.title} content={item.content} icon={item.icon} />
+                        <Card key={index} title={item.title} desc={item.desc} icon={item.icon} />
                     ))
                 )
             }
