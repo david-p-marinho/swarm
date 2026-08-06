@@ -1,15 +1,14 @@
-import { GetCalendar, CalendarItems } from "@/utils/getCalendar"
+import { GetCalendar} from "@/utils/getCalendar"
 import Items from "./items"
+import { CalendarEvent } from "@/types/calendarEvent"
 
-const data = await GetCalendar()
-
-const List = () => {
+const List = ({events}: {events: CalendarEvent[]}) => {
     return(
         <div className="w-full pb-10">
                 {
-                    data && (
-                        data.map((item, index) => (
-                            <Items key={index} title={item.title} status={item.status}/>
+                    events && (
+                        events.map((event, index) => (
+                            <Items key={index} title={event.title} status={event.status} resume={event.resume} startDate={event.startDate} endDate={event.endDate}/>
                         ))
                     )
                 }

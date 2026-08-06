@@ -3,7 +3,7 @@ import Card from "./card"
 
 const Follow = () => {
     return(
-        <section>
+        <section >
             <Title content={"Siga-nos"}/>
 
             <div className="flex justify-center">

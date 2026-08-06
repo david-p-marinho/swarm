@@ -13,7 +13,7 @@ export default function Home() {
     <div>
       <Header />
 
-      <main>
+      <main className="flex flex-col items-center">
         <Hero/> 
         <EventCard title={"Rifa solidária Swarm 79"} text={"Apoie a equipe e concorra a prêmios — pagamento via Pix"} value="R$30" />
         <AboutUs/>

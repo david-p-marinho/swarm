@@ -1,13 +1,16 @@
 import Link from "next/link"
+import Image from "next/image";
+import { RiMenuLine } from "react-icons/ri";
 
 export default function Header() {
     return (
             <main className={bodyStyle}>
-                <Link href="/">
-                    <h1>SWARM 79</h1>
+                <Link className="flex items-center" href="/">
+                    <Image src={'/logo.png'} alt="logo" width={40} height={40} />
+                    <h1 className="text-[#d72229] ml-[5px] font-bold">SWARM 79</h1>
                 </Link>
 
-                <div>
+                <div className="hidden md:block">
                     <ul className="flex row">
                         <li className="m-2">
                             <Link href="/sobre" className="hover:text-red-500">Sobre nós</Link>
@@ -18,10 +21,11 @@ export default function Header() {
                         <li className="m-2">
                             <Link href="/noticias" className="hover:text-red-500">Noticias</Link>
                         </li>
-                        <li className="m-2 ">
-                            <Link href="/" className="hover:text-red-500">Competições</Link>
-                        </li>
                     </ul>
+                </div>
+
+                <div className="md:hidden">
+                    <RiMenuLine className="w-[40px] h-[40px]" />
                 </div>
             </main>
     );

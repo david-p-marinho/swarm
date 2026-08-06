@@ -36,11 +36,11 @@ const MemberList = ({ sub, eletronica, marketing, mecanica, ti }: props) => {
 
     return (
         <div>
-            <h2>{title}</h2>
+            <h2 className="text-center text-white text-[36px] font-bold mt-[40px] mb-[20px]">{title}</h2>
             <div className="flex">
                 {
                     data?.map((data) => (
-                        <MemberCard name={data.name} img={data.img} position={data.position} />
+                        <MemberCard name={data.name} img={data.img} position={data.position} links={data.links} />
                     ))
                 }
             </div>

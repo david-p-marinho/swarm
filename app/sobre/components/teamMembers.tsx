@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import SubAreaBtn from "./subAreaBtn"
-import SubArea from "@/type/subArea"
+import SubArea from "@/types/subArea"
 import MemberList from "./merberList"
 import { Member } from "@/types/member"
 

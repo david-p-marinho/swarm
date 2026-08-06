@@ -1,6 +1,6 @@
 const HeroList = () => {
     return (
-        <ul className="flex">
+        <ul className="flex flex-col md:flex-row">
             <li className={listContainer + " rounded-l-md border-r-1 border-r-[#ffffff12]"}>
                 <p className={listTitle}>5+</p>
                 <p>Anos de projeto</p>

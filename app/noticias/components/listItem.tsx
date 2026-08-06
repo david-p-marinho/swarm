@@ -1,11 +1,12 @@
 import { News } from "@/types/news";
 import Image from "next/image";
+import Link from "next/link";
 
 type news = Omit<News, 'content'>
 
-const ListItems = ({ title, img, resume, tag, timeStamp, isHighLight }: news) => {
+const ListItems = ({ title, img, resume, tag, timeStamp, isHighLight, id }: news) => {
     return (
-        <div className="group w-full flex flex-col border-b-1 border-b-[#ffffff12] py-10">
+        <Link className="group w-full flex flex-col border-b-1 border-b-[#ffffff12] py-10" href={`/noticias/${id}`}>
             <span className="bg-[#c8102e1f] text-[#D72229] text-[10px] px-2 py-1 rounded-md self-start mb-1 ">{tag}</span>
 
             <div className="flex justify-between">
@@ -24,7 +25,7 @@ const ListItems = ({ title, img, resume, tag, timeStamp, isHighLight }: news) =>
                     <p className="group-hover:text-red-400 transition-colors duration-200">Ler mais</p>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

@@ -1,17 +1,47 @@
 [
     {
-        "nome": "Gael",
+        "name": "Gael",
         "img": "",
-        "position": "marketing"
+        "position": "marketing",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://br.linkedin.com/"
+            },
+            {
+                "icon": "logo-instagram",
+                "link": "https://www.instagram.com/"
+            }
+        ]
     },
     {
-        "nome": "Alice",
+        "name": "Alice",
         "img": "",
-        "position": "marketing"
+        "position": "marketing",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://br.linkedin.com/"
+            },
+            {
+                "icon": "logo-instagram",
+                "link": "https://www.instagram.com/"
+            }
+        ]
     },
     {
-        "nome": "Bernardo",
+        "name": "Bernardo",
         "img": "",
-        "position": "marketing"
+        "position": "marketing",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://br.linkedin.com/"
+            },
+            {
+                "icon": "logo-instagram",
+                "link": "https://www.instagram.com/"
+            }
+        ]
     }
 ]

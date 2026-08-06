@@ -1,12 +1,32 @@
 [
     {
-        "nome": "Laura",
+        "name": "Laura",
         "img": "",
-        "position": "mecanica"
+        "position": "mecanica",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://br.linkedin.com/"
+            },
+            {
+                "icon": "logo-instagram",
+                "link": "https://www.instagram.com/"
+            }
+        ]
     },
     {
-        "nome": "Gabriel",
+        "name": "Gabriel",
         "img": "",
-        "position": "mecanica"
+        "position": "mecanica",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://br.linkedin.com/"
+            },
+            {
+                "icon": "logo-instagram",
+                "link": "https://www.instagram.com/"
+            }
+        ]
     }
 ]

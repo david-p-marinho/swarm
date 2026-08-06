@@ -1,9 +1,9 @@
-import SubArea from "@/type/subArea"
+import SubArea from "@/types/subArea"
 import Link from "next/link"
 
 const Card = ({title, desc, icon}: SubArea) => {
     return(
-        <Link href="#" className="border-1 border-[#1A1918] bg-[#242321] shadow-md rounded-md px-10 py-5 mx-3 flex flex-col items-center justify-between w-[280px] h-[385px] group hover:border-[#8A161A] transition-all duration-300 hover:shadow-xl">
+        <Link href="#" className="border border-[#1A1918] bg-[#242321] shadow-md rounded-md px-10 py-5 flex flex-col items-center justify-between w-[280px] h-[385px] group hover:border-[#8A161A] transition-all duration-300 hover:shadow-xl snap-center shrink-0">
             {/* @ts-ignore */}
             <ion-icon name={icon} className="w-[30px] h-[30px] text-[#D72229] "></ion-icon>
             <p className="text-[#D72229]" style={{fontSize: 16, fontWeight: 'bold'}}>{title}</p>
@@ -17,5 +17,6 @@ const Card = ({title, desc, icon}: SubArea) => {
         </Link>
     )
 }
+
 
 export default Card

@@ -5,7 +5,7 @@ const data = await GetSubs()
 
 const List = () => {
     return (
-        <div className="flex">
+        <div className="w-full flex overflow-x-auto snap-x snap-mandatory gap-4 scrollbar-none pb-4 md:justify-center">
             {
                 data && (
                     data.map((item, index) => (

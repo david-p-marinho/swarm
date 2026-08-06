@@ -1,4 +1,4 @@
-import SubArea from "@/type/subArea";
+import SubArea from "@/types/subArea";
 import { promises as fs } from "fs";
 import path from "path";
 
