@@ -1,19 +1,19 @@
 const HeroList = () => {
     return (
-        <ul className="flex flex-col md:flex-row">
-            <li className={listContainer + " rounded-l-md border-r-1 border-r-[#ffffff12]"}>
+        <ul className="flex flex-wrap gap-[1px] flex-row">
+            <li className={listContainer + " rounded-tl-md md:rounded-l-md"}>
                 <p className={listTitle}>5+</p>
                 <p>Anos de projeto</p>
             </li>
-            <li className={listContainer + " border-r-1 border-r-[#ffffff12]"}>
+            <li className={listContainer + " rounded-bl-md md:rounded-none"}>
                 <p className={listTitle}>20+</p>
                 <p>Membros ativos</p>
             </li>
-            <li className={listContainer + " border-r-1 border-r-[#ffffff12]"}>
+            <li className={listContainer + " rounded-tr-md md:rounded-none"}>
                 <p className={listTitle}>SAE</p>
                 <p>Brasil 2025</p>
             </li>
-            <li className={listContainer + " rounded-r-md"}>
+            <li className={listContainer + " rounded-br-md md:rounded-r-md"}>
                 <p className={listTitle}>UFS</p>
                 <p>Sergipe</p>
             </li>

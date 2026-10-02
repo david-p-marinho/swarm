@@ -25,7 +25,7 @@ export default function Header() {
                 </div>
 
                 <div className="md:hidden">
-                    <RiMenuLine className="w-[40px] h-[40px]" />
+                    <RiMenuLine className="w-[24px] h-[24px]" />
                 </div>
             </main>
     );
