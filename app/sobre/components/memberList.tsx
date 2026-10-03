@@ -41,7 +41,7 @@ const MemberList = ({ sub, eletronica, marketing, mecanica, ti, gestao }: props)
     return (
         <div>
             <h2 className="text-center text-white text-[36px] font-bold mt-[40px] mb-[20px]">{title}</h2>
-            <div className="flex">
+            <div className="grid grid-cols-4 gap-4">
                 {
                     data?.map((data, index) => (
                         <MemberCard key={index} name={data.name} img={data.img} position={data.position} links={data.links} />

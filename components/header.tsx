@@ -4,7 +4,7 @@ import { RiMenuLine } from "react-icons/ri";
 
 export default function Header() {
     return (
-        <div className="w-full flex justify-center my-3 absolute">
+        <div className="w-full flex justify-center my-3 absolute z-20">
             <main className={bodyStyle}>
                 <Link className="flex items-center" href="/">
                     <Image src={'/logo.png'} alt="logo" width={40} height={40} />
