@@ -1,0 +1,11 @@
+{
+    "id": 0,
+    "title": "Noticia de teste",
+    "img": "/news1.jpg",
+    "resume": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "tag": ["Competição", "Evento"],
+    "timeStamp": "20/06/2026",
+    "isHighLight": true,
+    "content": "O constante avanço das tecnologias web exige que desenvolvedores e designers aprimorem continuamente a experiência de navegação em telas pequenas. A implementação de layouts responsivos não se limita apenas ao dimensionamento automático de elementos, mas abrange o equilíbrio tipográfico, a acessibilidade e a fluidez visual ao longo de todo o ecossistema da aplicação.",
+    "content2" : "Para garantir uma leitura extremamente confortável em smartphones, é fundamental analisar detalhadamente a hierarquia das informações, a proporção entre o espaçamento das linhas e a distribuição harmônica dos blocos de texto. O uso adequado do alinhamento e da hifenização automática evita quebras indesejadas e elimina lacunas visuais desconfortáveis na interface."
+}

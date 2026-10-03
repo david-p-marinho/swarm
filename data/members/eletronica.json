@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Erivelton Ferreira",
+        "img": "/members/eletronica/Erivelton.webp",
+        "position": "eletronica",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://br.linkedin.com/"
+            }
+        ]
+    },
+    {
+        "name": "Mariane Martins",
+        "img": "/members/eletronica/Mariane.webp",
+        "position": "eletronica",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/mariane-martins-/"
+            }
+        ]
+    },
+    {
+        "name": "Matheus Oliveira",
+        "img": "/members/eletronica/Matheus.webp",
+        "position": "eletronica",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/matheus-oliveira-melo-21b0a5267/"
+            }
+        ]
+    },
+    {
+        "name": "Silas Santos",
+        "img": "/members/eletronica/Silas.webp",
+        "position": "eletronica",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/silas-santos-479569327"
+            }
+        ]
+    },
+    {
+        "name": "Yan Robert",
+        "img": "/members/eletronica/Yan.webp",
+        "position": "Lider",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/yan-robert-a1904b172/"
+            }
+        ]
+    }
+]

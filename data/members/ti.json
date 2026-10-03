@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Arthur Grazzia ",
+        "img": "/members/programaçao/Arthur.webp",
+        "position": "programação",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://br.linkedin.com/"
+            }
+        ]
+    },
+    {
+        "name": "Bruno Henrique",
+        "img": "/members/programaçao/Bruno.webp",
+        "position": "Lider",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/brunohenriquedeveloper/"
+            },
+            {
+                "icon": "logo-github",
+                "link": "https://github.com/brunohenriquedeveloper"
+            }
+        ]
+    },
+    {
+        "name": "David Pequeno",
+        "img": "/members/programaçao/David.webp",
+        "position": "Visão Computacional",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/david-pequeno-marinho/"
+            },
+            {
+                "icon": "logo-github",
+                "link": "https://github.com/david-p-marinho"
+            }
+        ]
+    },
+    {
+        "name": "José Davi Correia",
+        "img": "/members/programaçao/Jose.webp",
+        "position": "Visão Computacional",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://br.linkedin.com/"
+            }
+        ]
+    }
+]
