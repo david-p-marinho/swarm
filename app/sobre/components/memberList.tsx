@@ -7,10 +7,11 @@ interface props {
     eletronica: Member[],
     marketing: Member[],
     mecanica: Member[],
-    ti: Member[]
+    ti: Member[],
+    gestao: Member[]
 }
 
-const MemberList = ({ sub, eletronica, marketing, mecanica, ti }: props) => {
+const MemberList = ({ sub, eletronica, marketing, mecanica, ti, gestao }: props) => {
 
     var data = mecanica
     var title = "mecanica"
@@ -32,6 +33,9 @@ const MemberList = ({ sub, eletronica, marketing, mecanica, ti }: props) => {
             data = eletronica
             title = "Eletronica"
             break
+        case 4:
+            data = gestao
+            title = "Gestão"
     }
 
     return (
@@ -39,8 +43,8 @@ const MemberList = ({ sub, eletronica, marketing, mecanica, ti }: props) => {
             <h2 className="text-center text-white text-[36px] font-bold mt-[40px] mb-[20px]">{title}</h2>
             <div className="flex">
                 {
-                    data?.map((data) => (
-                        <MemberCard name={data.name} img={data.img} position={data.position} links={data.links} />
+                    data?.map((data, index) => (
+                        <MemberCard key={index} name={data.name} img={data.img} position={data.position} links={data.links} />
                     ))
                 }
             </div>

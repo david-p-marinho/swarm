@@ -3,7 +3,7 @@
 import { useState } from "react"
 import SubAreaBtn from "./subAreaBtn"
 import SubArea from "@/types/subArea"
-import MemberList from "./merberList"
+import MemberList from "./memberList"
 import { Member } from "@/types/member"
 
 interface props {
@@ -11,10 +11,11 @@ interface props {
     eletronica: Member[],
     marketing: Member[],
     mecanica: Member[],
-    ti: Member[]
+    ti: Member[],
+    gestao: Member[]
 }
 
-const TeamMembers = ({ areas, eletronica, marketing, mecanica, ti }: props) => {
+const TeamMembers = ({ areas, eletronica, marketing, mecanica, ti, gestao }: props) => {
     const [subArea, setSubArea] = useState(0)
 
     return (
@@ -25,7 +26,7 @@ const TeamMembers = ({ areas, eletronica, marketing, mecanica, ti }: props) => {
                 }
             </div>
 
-            <MemberList sub={subArea} eletronica={eletronica} marketing={marketing} mecanica={mecanica} ti={ti} />
+            <MemberList sub={subArea} eletronica={eletronica} marketing={marketing} mecanica={mecanica} ti={ti} gestao={gestao} />
         </div>
     )
 }

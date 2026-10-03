@@ -1,46 +1,56 @@
 [
     {
-        "name": "Gael",
-        "img": "",
+        "name": "Iago Foggetti",
+        "img": "/members/marketing/Iago.webp",
         "position": "marketing",
         "links": [
             {
                 "icon": "logo-linkedin",
-                "link": "https://br.linkedin.com/"
-            },
-            {
-                "icon": "logo-instagram",
-                "link": "https://www.instagram.com/"
+                "link": "https://www.linkedin.com/in/iagofoggetti/"
             }
         ]
     },
     {
-        "name": "Alice",
-        "img": "",
+        "name": "Ketelen Santos",
+        "img": "/members/marketing/Ketelen.webp",
         "position": "marketing",
         "links": [
             {
                 "icon": "logo-linkedin",
                 "link": "https://br.linkedin.com/"
-            },
-            {
-                "icon": "logo-instagram",
-                "link": "https://www.instagram.com/"
             }
         ]
     },
     {
-        "name": "Bernardo",
-        "img": "",
+        "name": "Micael Bomfim",
+        "img": "/members/marketing/Micael.webp",
         "position": "marketing",
         "links": [
             {
                 "icon": "logo-linkedin",
                 "link": "https://br.linkedin.com/"
-            },
+            }
+        ]
+    },
+    {
+        "name": "Mizael Paris Leite",
+        "img": "/members/marketing/Mizael.webp",
+        "position": "marketing",
+        "links": [
             {
-                "icon": "logo-instagram",
-                "link": "https://www.instagram.com/"
+                "icon": "logo-linkedin",
+                "link": "https://br.linkedin.com/"
+            }
+        ]
+    },
+    {
+        "name": "Ysrsel de Jesus",
+        "img": "/members/marketing/Ysrsel.webp",
+        "position": "marketing",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/ysrael-sacrati/"
             }
         ]
     }

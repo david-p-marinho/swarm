@@ -5,7 +5,7 @@ import { GetSubs } from "@/utils/getSub";
 import { GetMembers } from "@/utils/getMembers";
 
 const areas = await GetSubs()
-const [eletronica, marketing, mecanica, ti] = await GetMembers()
+const [eletronica, marketing, mecanica, ti, gestao] = await GetMembers()
 
 export default function About() {
     return (
@@ -25,7 +25,7 @@ export default function About() {
                 <div>
                     <h2 className="text-[#D72229] text-[34px] font-bold py-10 mb-10">Integrantes</h2>
                 
-                    <TeamMembers areas={areas} eletronica={eletronica} marketing={marketing} mecanica={mecanica} ti={ti} />
+                    <TeamMembers areas={areas} eletronica={eletronica} marketing={marketing} mecanica={mecanica} ti={ti} gestao={gestao}/>
                 </div>
             </main>
 

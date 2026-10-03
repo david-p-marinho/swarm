@@ -18,5 +18,10 @@
         "icon": "flash",
         "title": "Eletronica",
         "desc": "projetamos e otimizamos os sistemas elétricos e eletrônicos que sustentam o funcionamento do drone garantindo segurança, eficiência e precisão. desenvolvemos e integramos circuitos, componentes e soluções embarcadas que tornam o drone mais confiável e responsivo."
+    },
+    {
+        "icon": "flash",
+        "title": "Gestao",
+        "desc": "Preciso criar uma descriçao e achar um icon p essa sub"
     }
 ]

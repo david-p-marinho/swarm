@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Evelyn Siqueira Bispo",
+        "img": "/members/gestao/Evelyn.webp",
+        "position": "Gestão",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/evelynsiqueirabispo135/"
+            }
+        ]
+    },
+    {
+        "name": "Gabriel Rodrigues",
+        "img": "/members/gestao/Gabriel.webp",
+        "position": "Lider",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/gabriell-rodriguess"
+            }
+        ]
+    },
+    {
+        "name": "Natalia Guilherme",
+        "img": "/members/gestao/Natalia.webp",
+        "position": "Gestão",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/natalia-assiss/"  
+            }
+        ]
+    }
+]

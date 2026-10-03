@@ -1,31 +1,45 @@
 [
     {
-        "name": "Laura",
-        "img": "",
+        "name": "Catarina Matos",
+        "img": "/members/mecanica/Catarina.webp",
         "position": "mecanica",
         "links": [
             {
                 "icon": "logo-linkedin",
-                "link": "https://br.linkedin.com/"
-            },
-            {
-                "icon": "logo-instagram",
-                "link": "https://www.instagram.com/"
+                "link": "https://www.linkedin.com/in/catarina-matos-587a993a6"
             }
         ]
     },
     {
-        "name": "Gabriel",
-        "img": "",
+        "name": "Gilma Calazans",
+        "img": "/members/mecanica/Gilma.webp",
+        "position": "mecanica",
+        "links": [
+            {
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/gilma-calazans-038962371/"
+            }
+        ]
+    },
+    {
+        "name": "Guilherme",
+        "img": "/members/mecanica/Guilherme.webp",
         "position": "mecanica",
         "links": [
             {
                 "icon": "logo-linkedin",
                 "link": "https://br.linkedin.com/"
-            },
+            }
+        ]
+    },
+    {
+        "name": "Jonas Alexandre",
+        "img": "/members/mecanica/Jonas.webp",
+        "position": "mecanica",
+        "links": [
             {
-                "icon": "logo-instagram",
-                "link": "https://www.instagram.com/"
+                "icon": "logo-linkedin",
+                "link": "https://www.linkedin.com/in/jo-onas/"
             }
         ]
     }
