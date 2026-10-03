@@ -13,7 +13,7 @@ const List = () => {
             <div className="flex flex-col items-center w-full">
                 {
                     sortedNews.map((news) => (
-                        <ListItems key={news.id} title={news.title} img={news.img} resume={news.resume} tag={news.tag} timeStamp={news.timeStamp} isHighLight={news.isHighLight} id={news.id} />
+                        <ListItems key={news.id} title={news.title} img={news.img} resume={news.resume} tag={news.tag} timeStamp={news.timeStamp} id={news.id} />
                     ))
                 }
             </div>

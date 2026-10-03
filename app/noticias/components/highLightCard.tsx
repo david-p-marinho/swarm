@@ -19,7 +19,7 @@ export default function HighLightCard({ tag, img, title, resume }: highLightProp
                     <Image className="w-full h-[360px] object-cover rounded-md mb-10 transition-transform duration-1000 ease-in-out group-hover:scale-110" src={img} alt="Foto da equipe" height={422} width={456} objectFit="cover" />
                 </div>
 
-                <p className="text-[18px] font-bold group-hover:text-[#D72229] transition-colors duration-1000">{title}</p>
+                <p className="font-bold text-[20px] tracking-[3px] group-hover:text-[#D72229] transition-colors duration-1000">{title}</p>
                 <p className="group-hover:underline duration-1000">{resume}</p>
             </div>
         </div>

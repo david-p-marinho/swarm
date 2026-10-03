@@ -11,7 +11,9 @@ export default function News() {
                     <h1>Notícias</h1>
                 </div>
 
-                <HighLight/>
+                <div className="hidden md:block">
+                    <HighLight/>
+                </div>
 
                 <List />
             </div>
