@@ -5,7 +5,7 @@ import { RiUserLine } from "react-icons/ri"
 const MemberCard = ({ name, img, position, links }: Member) => {
 
     return (
-        <div className="w-[250px] h-[360px] bg-[#2E2E2E] rounded-md flex flex-col items-center mr-[20px] mb-[50px] justify-center p-5">
+        <div className="w-[250px] h-[360px] bg-[#3D3E45] rounded-md flex flex-col items-center mb-[50px] justify-center p-5 shadow-md">
             <div className="w-[70px] h-[70px] bg-white rounded-full flex justify-center items-center">
                 {
                     img != "" ? (
@@ -25,7 +25,7 @@ const MemberCard = ({ name, img, position, links }: Member) => {
             <div className="flex w-full justify-start">
                 {
                     links.map((item, index) => (
-                        <a className="mr-5 group" key={index} href={item.link}>
+                        <a target="_blank" className="mr-5 group" key={index} href={item.link}>
                             {/* @ts-ignore */}
                             <ion-icon name={item.icon} className="w-[30px] h-[30px] text-white group-hover:text-[#D72229] transition-colors duration-200"></ion-icon>
                         </a>

@@ -20,7 +20,7 @@ const TeamMembers = ({ areas, eletronica, marketing, mecanica, ti, gestao }: pro
 
     return (
         <div >
-            <div className="flex">
+            <div className="flex gap-4">
                 {
                     areas.map((sub, index) => (<SubAreaBtn key={index} setArea={setSubArea} isSelect={subArea == index} title={sub.title} img={sub.icon} index={index} />))
                 }
