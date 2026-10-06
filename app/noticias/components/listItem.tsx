@@ -1,6 +1,7 @@
 import { News } from "@/types/news";
 import Image from "next/image";
 import Link from "next/link";
+import { RiArrowRightLine } from "react-icons/ri";
 
 type news = Omit<News, 'content' | 'isHighLight' | 'content2'>
 
@@ -14,7 +15,7 @@ const ListItems = ({ title, img, resume, tag, timeStamp, id }: news) => {
                     ))
                 }
             </div>
-            <div className="flex justify-between">
+            <div className="relative">
                 <div className="flex flex-col md:flex-row">
                     <div className="overflow-hidden w-full max-w-[350px] min-w-[200px]">
                         <Image className="aspect-video w-full transition-transform duration-1000 ease-in-out group-hover:scale-110" src={img} alt={title} width={300} height={200} />
@@ -27,8 +28,9 @@ const ListItems = ({ title, img, resume, tag, timeStamp, id }: news) => {
                     </div>
                 </div>
 
-                <div className="self-end hidden md:block">
-                    <p className="group-hover:text-red-400 transition-colors duration-1000">Ler mais</p>
+                <div className="hidden md:flex absolute right-3 items-center gap-2">
+                    <p className="group-hover:text-[#D72229] transition-colors duration-1000">Ler mais</p>
+                    <RiArrowRightLine className="group-hover:text-[#D72229] transition-colors duration-1000" />
                 </div>
             </div>
         </Link>

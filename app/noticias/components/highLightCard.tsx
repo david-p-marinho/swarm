@@ -1,11 +1,11 @@
 import Image from "next/image"
 import { News } from "@/types/news"
 
-type highLightProps = Omit<News, 'id'| 'content' | 'content2' | 'timeStamp' | 'isHighLight'>
+type highLightProps = Omit<News, 'id' | 'content' | 'content2' | 'timeStamp' | 'isHighLight'>
 
 export default function HighLightCard({ tag, img, title, resume }: highLightProps) {
     return (
-        <div className="w-[600px] p-2 cursor-pointer group">
+        <div className="w-[40dvw] p-2 cursor-pointer group">
             <div className="flex flex-col justify-between items-center">
                 <div className="flex gap-2 w-full">
                     {
@@ -14,9 +14,15 @@ export default function HighLightCard({ tag, img, title, resume }: highLightProp
                         ))
                     }
                 </div>
-                
-                <div className="overflow-hidden w-[600px] h-[360px] rounded-md">
-                    <Image className="w-full h-[360px] object-cover rounded-md mb-10 transition-transform duration-1000 ease-in-out group-hover:scale-110" src={img} alt="Foto da equipe" height={422} width={456} objectFit="cover" />
+
+                <div className="overflow-hidden w-full aspect-video rounded-md relative">
+                    <Image
+                        src={img}
+                        alt="Foto da equipe"
+                        width={456}
+                        height={422}
+                        className="w-full h-full object-cover rounded-md mb-10 transition-transform duration-1000 ease-in-out group-hover:scale-110"
+                    />
                 </div>
 
                 <p className="font-bold text-[20px] tracking-[3px] group-hover:text-[#D72229] transition-colors duration-1000">{title}</p>
