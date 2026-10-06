@@ -10,10 +10,10 @@ interface props {
 
 const SubAreaBtn = ({setArea, isSelect, title, img, index} : props) => {
     return(
-        <button className={`rounded-full w-[200px] h-[75px] flex items-center justify-center cursor-pointer px-5 ${isSelect ? 'bg-[#D72229] text-white': 'border border-[#D72229] text-[#D72229]'}`} onClick={() => setArea(index)}>
+        <button className={`rounded-full w-[150px] h-[55px] flex items-center justify-center cursor-pointer px-5 ${isSelect ? 'bg-[#D72229] text-white': 'border border-[#D72229] text-[#D72229]'}`} onClick={() => setArea(index)}>
             {/* @ts-ignore */}
                 <ion-icon name={img} className="w-[20px] h-[20px] mr-[10px]"></ion-icon>
-            <p className="text-[20px] font-bold">{title}</p>
+            <p className="text-[14px] font-bold">{title}</p>
         </button>
     )
 }

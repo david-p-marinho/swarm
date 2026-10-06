@@ -5,7 +5,7 @@ import { RiUserLine } from "react-icons/ri"
 const MemberCard = ({ name, img, position, links }: Member) => {
 
     return (
-        <div className="w-[250px] h-[360px] bg-[#3D3E45] rounded-md flex flex-col items-center mb-[50px] justify-center p-5 shadow-md">
+        <div className="w-[220px] h-[300px] bg-[#3D3E45] rounded-md flex flex-col items-center justify-center p-5 shadow-md">
             <div className="w-[70px] h-[70px] bg-white rounded-full flex justify-center items-center">
                 {
                     img != "" ? (
@@ -18,8 +18,8 @@ const MemberCard = ({ name, img, position, links }: Member) => {
             </div>
 
             <div className="w-full my-15">
-                <p className="text-[#D72229] text-[24px] font-bold">{name}</p>
-                <p className="text-[16px]">{position}</p>
+                <p className="text-[#D72229] text-[20px] font-bold">{name}</p>
+                <p className="text-[14px]">{position}</p>
             </div>
             
             <div className="flex w-full justify-start">
