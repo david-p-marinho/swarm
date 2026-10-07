@@ -5,7 +5,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 
 type news = Omit<News, 'content' | 'isHighLight' | 'content2'>
 
-const ListItems = ({ title, img, resume, tag, timeStamp, id }: news) => {
+export default function NewsCard({ title, img, resume, tag, timeStamp, id }: news) {
     return (
         <Link className="group w-full flex flex-col border-b-1 border-b-[#3B3A38] py-10" href={`/noticias/${id}`}>
             <div className="flex gap-2 w-full">
@@ -36,5 +36,3 @@ const ListItems = ({ title, img, resume, tag, timeStamp, id }: news) => {
         </Link>
     )
 }
-
-export default ListItems

@@ -1,16 +1,9 @@
 [
     {
-        "title": "SAE Brasil Eletroquad",
-        "status": 1,
-        "resume": "Competição de drones",
-        "startDate": "2026-07-31",
-        "endDate": "2026-08-01"
-    },
-    {
-        "title": "PSEL — Processo Seletivo Swarm",
+        "title": "Lançamento do site oficial",
         "status": 0,
-        "resume": "Junte-se a equpe",
-        "startDate": "2026-08-15",
-        "endDate": "2026-08-20"
+        "resume": "Lançamento do site da equipe",
+        "startDate": "2026-10-12",
+        "endDate": "2026-10-12"
     }
 ]

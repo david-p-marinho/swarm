@@ -24,9 +24,9 @@ const CreateCalendar = ({events}: {events: CalendarEvent[]}) => {
    return (
       <div className="w-full h-full p-4 bg-[#1e1d1c] rounded-xl shadow-md">
          <div className="flex items-center justify-between mb-4 text-white">
-            <button onClick={() => setCurrentMonth(subMonths(currentMonth, 1))} className="p-1"><RiArrowLeftSLine /></button>
+            <button onClick={() => setCurrentMonth(subMonths(currentMonth, 1))} className="p-1 cursor-pointer"><RiArrowLeftSLine /></button>
             <h2 className="font-bold capitalize"> {format(currentMonth, 'MMMM yyyy', { locale: ptBR })} </h2>
-            <button onClick={() => setCurrentMonth(addMonths(currentMonth, 1))} className="p-1"><RiArrowRightSLine /></button>
+            <button onClick={() => setCurrentMonth(addMonths(currentMonth, 1))} className="p-1 cursor-pointer"><RiArrowRightSLine /></button>
 
          </div>
 

@@ -1,6 +1,6 @@
 import Header from "@/components/header";
-import List from "./components/list";
 import HighLight from "./components/highLight";
+import NewsList from "../../components/newsList";
 
 export default function News() {
     return (
@@ -15,7 +15,7 @@ export default function News() {
                     <HighLight/>
                 </div>
 
-                <List />
+                <NewsList/>
             </div>
 
         </div>

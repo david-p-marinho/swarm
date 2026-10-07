@@ -1,5 +1,5 @@
 import GetNews from "@/utils/getNews"
-import ListItems from "./listItem"
+import ListItems from "../../../components/newsCard"
 import SortNews from "@/utils/sortNews"
 import Image from "next/image"
 import HighLightCard from "./highLightCard"

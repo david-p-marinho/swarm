@@ -3,13 +3,13 @@ const DefineStatus = (status: number) => {
 
     switch(status){
         case 0:
-            result = 'agendado'
+            result = 'Em breve'
         break
         case 1:
-            result = 'em andamento'
+            result = 'Em andamento'
         break
         case 2:
-            result = 'encerrado'
+            result = 'Encerrado'
         break
         default:
             result = '???'
