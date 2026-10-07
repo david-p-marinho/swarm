@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Swarm79 — Website Oficial
 
-## Getting Started
+> Interface web moderna, responsiva e de alta performance desenvolvida para a **Swarm79**, equipe de competição e estudo de drones da Universidade Federal de Sergipe (**UFS**).
 
-First, run the development server:
+<img width="1612" height="954" alt="image" src="https://github.com/user-attachments/assets/2df6b14c-4922-4ac4-bddf-bf10a1ef7be1" />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Sobre o Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O objetivo deste projeto foi reformular e construir a presença digital da equipe **Swarm79**, criando uma plataforma intuitiva para apresentar a história do grupo, projetos de engenharia, conquistas em competições e membros da equipe.
 
-## Learn More
+O foco principal do desenvolvimento esteve na **experiência do usuário (UI/UX)**, com atenção meticulosa aos detalhes de acabamento, transições fluidas, responsividade em múltiplos dispositivos e excelente performance de carregamento.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tecnologias utilizadas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+- **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+- **Deploy:** Vercel
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Principais Funcionalidades & Destaques de UI/UX
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Design Responsivo & Mobile First:** Layout adaptado e otimizado para smartphones, tablets e desktops.
+- **Componentização Modular:** Arquitetura limpa utilizando componentes reutilizáveis e fortemente tipados.
+- **Animações Fluidas:** Transições suaves de elementos e navegação para enriquecer a experiência sem comprometer a performance.
+- **Otimização de Performance:** Uso de carregamento otimizado de imagens (`next/image`) e componentes do lado do servidor (RSC).
