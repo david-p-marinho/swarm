@@ -8,7 +8,7 @@ const newsList = GetNews()
 
 const News = () => {
     return (
-        <section className="flex flex-col items-center py-[70px]">
+        <section className="flex flex-col items-center py-[70px] mx-10 md:mx-0">
 
             <Title content={"Noticias"} />
 
@@ -21,7 +21,7 @@ const News = () => {
 
             </div>
 
-            <Link className="flex items-center justify-center bg-[#D72229] px-3 py-2 rounded-md shadow-md" href={""}>
+            <Link className="flex items-center justify-center bg-[#D72229] px-3 py-2 rounded-md shadow-md" href={"/noticias"}>
                 <p>ir para noticias</p>
                 <RiArrowRightLine />
             </Link>

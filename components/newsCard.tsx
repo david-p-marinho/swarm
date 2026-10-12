@@ -16,7 +16,7 @@ export default function NewsCard({ title, img, resume, tag, timeStamp, id }: new
                 }
             </div>
             <div className="relative">
-                <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col items-center md:flex-row">
                     <div className="overflow-hidden w-full max-w-[350px] min-w-[200px]">
                         <Image className="aspect-video w-full transition-transform duration-1000 ease-in-out group-hover:scale-110" src={img} alt={title} width={300} height={200} />
                     </div>
