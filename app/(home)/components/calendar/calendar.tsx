@@ -19,7 +19,7 @@ const Calendar = async () => {
 
             <Title content={"Calendario"} />
 
-            <div className="grid grid-cols-[repeat(2,auto)] gap-x-4">
+            <div className="flex flex-cols md:grid md:grid-cols-[repeat(2,auto)] gap-x-4">
                 <div className="w-[300px] h-[350px] hidden md:block">
                     <CreateCalendar events={events} />
                 </div>

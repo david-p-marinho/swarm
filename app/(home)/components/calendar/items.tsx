@@ -15,12 +15,12 @@ const Items = ({title, status, startDate, endDate, resume}: CalendarEvent) => {
                 <p>{month}</p>
             </div>
 
-            <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <div className="flex flex-col items-center">
                 <p className="text-[#d72229] text-[18px] font-bold">{title}</p>
                 <p>{resume}</p>
             </div>
 
-            <div className="bg-[#c8102e1f] rounded-full px-2 py-1">
+            <div className="hidden md:block bg-[#c8102e1f] rounded-full px-2 py-1">
                 <p className="text-[#D72229]">{DefineStatus(status)}</p>
             </div>
         </div>
