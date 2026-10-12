@@ -16,8 +16,8 @@ export default function EventCard({ title, text, value }: cardProps) {
                 <IoTicket className="me-5" />
 
                 <div>
-                    <p>{title}</p>
-                    <p>{text}</p>
+                    <p className="text-[14px] font-bold">{title}</p>
+                    <p className="text-[12px]">{text}</p>
                 </div>
             </div>
 
