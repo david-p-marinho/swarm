@@ -15,8 +15,12 @@ const Calendar = async () => {
 
     const events: CalendarEvent[] = data.map(item => ({
         ...item,
-        startDate: parseLocalDate(item.startDate),
-        endDate: parseLocalDate(item.endDate),
+        startDate: typeof item.startDate === "string"
+            ? new Date(`${item.startDate}T12:00:00`)
+            : item.startDate,
+        endDate: typeof item.endDate === "string"
+            ? new Date(`${item.endDate}T12:00:00`)
+            : item.endDate,
     }));
 
     return (
