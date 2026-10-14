@@ -8,11 +8,11 @@ const newsList = GetNews()
 
 const News = () => {
     return (
-        <section className="flex flex-col items-center py-[70px] mx-10 md:mx-0">
+        <section className="flex flex-col items-center py-[70px]">
 
             <Title content={"Noticias"} />
 
-            <div className="flex flex-col items-center w-full mb-[30px]">
+            <div className="flex flex-col items-center mx-10 mb-[30px]">
                 {
                     newsList.slice(0, 2).map((news) => (
                         <NewsCard key={news.id} id={news.id} title={news.title} img={news.img} resume={news.resume} tag={news.tag} timeStamp={news.timeStamp}/>
