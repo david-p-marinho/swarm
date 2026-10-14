@@ -2,21 +2,25 @@ import CreateCalendar from "@/components/createCalendar"
 import Title from "../../../../components/title"
 import List from "./list"
 import { GetCalendar } from "@/utils/getCalendar"
-import { parseISO } from "date-fns"
 import { CalendarEvent } from "@/types/calendarEvent"
+
+const parseLocalDate = (dateString: string | Date) => {
+    if (dateString instanceof Date) return dateString;
+    const [year, month, day] = dateString.split('T')[0].split('-').map(Number);
+    return new Date(year, month - 1, day);
+}
 
 const Calendar = async () => {
     const data = await GetCalendar()
 
     const events: CalendarEvent[] = data.map(item => ({
         ...item,
-        startDate: typeof item.startDate === 'string' ? parseISO(item.startDate) : item.startDate,
-        endDate: typeof item.endDate === 'string' ? parseISO(item.endDate) : item.endDate,
+        startDate: parseLocalDate(item.startDate),
+        endDate: parseLocalDate(item.endDate),
     }));
 
     return (
         <section className="flex flex-col items-center bg-[#3D3E45] py-10 w-full">
-
             <Title content={"Calendario"} />
 
             <div className="flex flex-cols md:grid md:grid-cols-[repeat(2,auto)] gap-x-4">
@@ -28,7 +32,6 @@ const Calendar = async () => {
                     <List events={events} />
                 </div>
             </div>
-
         </section>
     )
 }
