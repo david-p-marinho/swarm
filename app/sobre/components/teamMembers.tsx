@@ -8,25 +8,31 @@ import { Member } from "@/types/member"
 
 interface props {
     areas: SubArea[],
-    eletronica: Member[],
-    marketing: Member[],
-    mecanica: Member[],
-    ti: Member[],
-    gestao: Member[]
+    memberData: Record<string, Member[]>
 }
 
-const TeamMembers = ({ areas, eletronica, marketing, mecanica, ti, gestao }: props) => {
-    const [subArea, setSubArea] = useState(0)
+const TeamMembers = ({ areas, memberData }: props) => {
+    const [subArea, setSubArea] = useState('Mecanica')
 
     return (
         <div>
-            <div className="flex justify-center gap-4">
-                {
-                    areas.map((sub, index) => (<SubAreaBtn key={index} setArea={setSubArea} isSelect={subArea == index} title={sub.title} img={sub.icon} index={index} />))
-                }
+            <div className="hidden md:block">
+                <div className="flex justify-center gap-4">
+                    {
+                        areas.map((sub, index) => (<SubAreaBtn key={index} setArea={setSubArea} isSelect={subArea == sub.title} title={sub.title} img={sub.icon} index={index} />))
+                    }
+                </div>
+
+                <MemberList sub={subArea} selectedData={memberData[subArea]} />
             </div>
 
-            <MemberList sub={subArea} eletronica={eletronica} marketing={marketing} mecanica={mecanica} ti={ti} gestao={gestao} />
+            <div className="md:hidden">
+                {
+                    areas.map((sub, index) => (
+                        <MemberList key={index} sub={sub.title} selectedData={memberData[sub.title]}/>
+                    ))
+                }
+            </div>
         </div>
     )
 }
