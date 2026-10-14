@@ -5,10 +5,9 @@ interface props {
     isSelect: boolean
     title: string
     img: string
-    index: number
 }
 
-const SubAreaBtn = ({setArea, isSelect, title, img, index} : props) => {
+const SubAreaBtn = ({setArea, isSelect, title, img} : props) => {
     return(
         <button className={`rounded-full w-[150px] h-[55px] flex items-center justify-center cursor-pointer px-5 ${isSelect ? 'bg-[#D72229] text-white': 'border border-[#D72229] text-[#D72229]'}`} onClick={() => setArea(title)}>
             {/* @ts-ignore */}

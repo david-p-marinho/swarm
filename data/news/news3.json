@@ -1,0 +1,11 @@
+{
+    "id": 2,
+    "title": "Site Lançado",
+    "img": "/swarmSite.webp",
+    "resume": "Lançamento do site oficial da equipe",
+    "tag": ["Noticia"],
+    "timeStamp": "14/10/2026",
+    "isHighLight": true,
+    "content": "Esse é um post de teste",
+    "content2" : "Caso queira aprender a editar ou criar novos, por favor, pergunte no grupo"
+}

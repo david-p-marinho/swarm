@@ -5,7 +5,7 @@ import { RiUserLine } from "react-icons/ri"
 const MemberCard = ({ name, img, position, links }: Member) => {
 
     return (
-        <div className="bg-[#3D3E45] rounded-md flex justify-between items-center p-5 shadow-md md:w-[220px] md:h-[300px] md:flex-col md:justify-center">
+        <div className="w-[90dvw] bg-[#3D3E45] rounded-md flex justify-between items-center p-5 shadow-md md:w-[220px] md:h-[300px] md:flex-col md:justify-center">
             <div className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] bg-white rounded-full flex justify-center items-center">
                 {
                     img != "" ? (

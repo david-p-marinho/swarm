@@ -24,11 +24,6 @@ const HeroList = () => {
 const listTitle = "font-['Bebas_Neue',_sans-serif] text-[30px] leading-none text-[#D72229]"
 const listContainer ="bg-black/42 w-36 flex flex-col items-center p-3"
 
-const style = {
-    'listContainer': {
-        background: 'rgba(0, 0, 0, 0.42)',
-        width: '140px'
-    }
-}
+
 
 export default HeroList

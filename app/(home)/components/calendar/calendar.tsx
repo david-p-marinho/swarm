@@ -24,7 +24,7 @@ const Calendar = async () => {
                     <CreateCalendar events={events} />
                 </div>
 
-                <div className="flex flex-col w-[100dvw] md:w-[600px] items-center">
+                <div className="flex flex-col w-[90dvw] md:w-[600px] items-center">
                     <List events={events} />
                 </div>
             </div>
